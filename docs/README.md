@@ -26,11 +26,9 @@ Background research for opening a Shopify store that sells dropshipped products 
 5. **Keep compliance tight:** realistic shipping promises, genuine reviews only, no unsubstantiated claims.
 6. **Hold 2–3 months of working capital** for payout reserves and ad testing.
 
-## Proposed expert-agent roles
+## Expert-agent roster
 
-Market Research · Product Hunter · Brand & Store Builder · Copywriter/Creative Director · Media Buyer/Ad Analyst · Email/Retention · Customer Support · Operations/Supplier Manager · Finance/Unit Economics · Compliance/Risk
-
-See [06-staffing.md](06-staffing.md) for how these map to business functions.
+The full advisory team — 26 expert roles across business, technical, operations, finance, legal and marketing, the 37 skills they share, and an agent × skill matrix — is in **[expert-roster.md](expert-roster.md)**. See [06-staffing.md](06-staffing.md) for how these map to business functions.
 
 ## Caveats
 
