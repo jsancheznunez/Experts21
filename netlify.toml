@@ -5,6 +5,10 @@
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
+  # Always build. Without this, Netlify skips builds when nothing inside web/ changed, but the app
+  # also reads ../.claude, ../knowledge and ../docs at build time, so those edits must redeploy too.
+  # (An exit code of 1 from the ignore command means "don't ignore: build".)
+  ignore = "exit 1"
 
 [build.environment]
   NODE_VERSION = "22"
