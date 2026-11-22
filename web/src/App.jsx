@@ -19,6 +19,21 @@ const storage = {
 };
 
 const byName = Object.fromEntries(team.agents.map((a) => [a.name, a]));
+
+/** Remove in-flight and failed answers, together with the question that produced each failure. */
+function dropFailed(conversations) {
+  return Object.fromEntries(Object.entries(conversations ?? {}).map(([name, list]) => {
+    const kept = [];
+    for (const m of Array.isArray(list) ? list : []) {
+      if (m.pending || m.error) {
+        if (kept.at(-1)?.role === "user") kept.pop();
+        continue;
+      }
+      kept.push(m);
+    }
+    return [name, kept];
+  }));
+}
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function Avatar({ agent, size = 36 }) {
@@ -142,7 +157,7 @@ function PasswordPrompt({ onSubmit }) {
 
 export default function App() {
   const [selected, setSelected] = useState(() => (byName[storage.get("experts21-selected", TEAM_ID)] ? storage.get("experts21-selected", TEAM_ID) : TEAM_ID));
-  const [conversations, setConversations] = useState(() => storage.get("experts21-conversations", {}));
+  const [conversations, setConversations] = useState(() => dropFailed(storage.get("experts21-conversations", {})));
   const [password, setPassword] = useState(() => storage.get("experts21-password", ""));
   const [needPassword, setNeedPassword] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -156,9 +171,9 @@ export default function App() {
 
   useEffect(() => { storage.set("experts21-selected", selected); }, [selected]);
   useEffect(() => {
-    // Persist finished messages only (not in-flight state).
-    const finished = Object.fromEntries(Object.entries(conversations).map(([k, v]) => [k, v.filter((m) => !m.pending)]));
-    storage.set("experts21-conversations", finished);
+    // Persist successful exchanges only: no in-flight messages, and no failed answers,
+    // so an old error (e.g. from before the API key was set) never reappears after a reload.
+    storage.set("experts21-conversations", dropFailed(conversations));
   }, [conversations]);
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [messages]);
 
