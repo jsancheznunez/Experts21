@@ -19,6 +19,7 @@ knowledge/<agent-name>/       each agent's own documents, read before every answ
 .claude/skills/<name>/SKILL.md  40 skills, preloaded into agents via the `skills:` field
 .claude/scripts/validate_team.py  checks agent and skill wiring
 deliverables/                 outputs the team saves (created on demand)
+exports/                      agents packaged as uploadable Claude skills (.claude/scripts/export_agent_skill.py)
 ```
 
 ## The team
