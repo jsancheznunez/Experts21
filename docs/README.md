@@ -26,9 +26,13 @@ Background research for opening a Shopify store that sells dropshipped products 
 5. **Keep compliance tight:** realistic shipping promises, genuine reviews only, no unsubstantiated claims.
 6. **Hold 2–3 months of working capital** for payout reserves and ad testing.
 
-## Expert-agent roster
+## Expert-agent team
 
-The full advisory team — 26 expert roles across business, technical, operations, finance, legal and marketing, the 37 skills they share, and an agent × skill matrix — is in **[expert-roster.md](expert-roster.md)**. See [06-staffing.md](06-staffing.md) for how these map to business functions.
+The research is turned into a working team of Claude Code agents:
+
+- **[expert-roster.md](expert-roster.md)** — 28 agents (26 domain experts across business, technical, operations, finance, legal and marketing, plus an orchestrator and a meta "team architect"), the 40 skills they share, and an agent × skill matrix.
+- Agents live in [`.claude/agents/`](../.claude/agents/), skills in [`.claude/skills/`](../.claude/skills/). How to use the team: [`CLAUDE.md`](../CLAUDE.md).
+- [06-staffing.md](06-staffing.md) explains how the roles map to business functions.
 
 ## Caveats
 
