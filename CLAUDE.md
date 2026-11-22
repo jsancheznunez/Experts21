@@ -21,6 +21,7 @@ knowledge/<agent-name>/       each agent's own documents, read before every answ
 deliverables/                 outputs the team saves (created on demand)
 exports/                      agents packaged as uploadable Claude skills (.claude/scripts/export_agent_skill.py)
 sdk/                          Node.js Claude Agent SDK script that asks Zoe a question (sdk/README.md)
+web/                          React chat app for the team, deployed on Netlify (web/README.md; netlify.toml at the root)
 ```
 
 ## The team

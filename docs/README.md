@@ -34,6 +34,7 @@ The research is turned into a working team of Claude Code agents:
 - Agents live in [`.claude/agents/`](../.claude/agents/), skills in [`.claude/skills/`](../.claude/skills/). How to use the team: [`CLAUDE.md`](../CLAUDE.md).
 - [agent-brains.md](agent-brains.md) — each agent's model (opus/sonnet/haiku) and why, plus its first name, voice and working style.
 - [`knowledge/`](../knowledge/README.md) — one folder per agent for your own documents; each agent reads its folder before answering.
+- [`web/`](../web/README.md) — a chat web app (Netlify) for talking to any expert or the whole team.
 - [how-to-talk-to-your-experts.md](how-to-talk-to-your-experts.md) — example prompts for one expert, a coordinated panel, or the whole team.
 - [06-staffing.md](06-staffing.md) explains how the roles map to business functions.
 

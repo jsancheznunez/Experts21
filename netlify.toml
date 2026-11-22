@@ -1,0 +1,13 @@
+# Netlify builds the web app in web/ with no extra settings in the Netlify UI.
+# Paths below (publish, functions) are relative to the base directory.
+[build]
+  base = "web"
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"

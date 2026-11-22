@@ -1,0 +1,137 @@
+:root {
+  --bg: #f7f7f5;
+  --panel: #ffffff;
+  --panel-2: #f1f1ee;
+  --text: #1d1d1b;
+  --muted: #6b6b66;
+  --border: #e2e2dc;
+  --accent: #5b4bdb;
+  --accent-soft: #ecebfd;
+  --user: #5b4bdb;
+  --user-text: #ffffff;
+  --error: #b42318;
+  --opus: #7a3fd1;
+  --sonnet: #1f6feb;
+  --haiku: #1a7f5a;
+  --d-coordination: #7a3fd1;
+  --d-strategy-business: #1f6feb;
+  --d-technical: #0e8a9b;
+  --d-operations: #c2610c;
+  --d-finance: #1a7f5a;
+  --d-legal-risk: #b42318;
+  --d-marketing: #c2307a;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141413; --panel: #1c1c1a; --panel-2: #262624; --text: #ecebe6; --muted: #a2a19a;
+    --border: #34342f; --accent: #9d93ff; --accent-soft: #2a2747; --user: #4c3fc4; --user-text: #fff; --error: #ff8a7a;
+    --opus: #b48cff; --sonnet: #79b0ff; --haiku: #5fd3a5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141413; --panel: #1c1c1a; --panel-2: #262624; --text: #ecebe6; --muted: #a2a19a;
+  --border: #34342f; --accent: #9d93ff; --accent-soft: #2a2747; --user: #4c3fc4; --user-text: #fff; --error: #ff8a7a;
+  --opus: #b48cff; --sonnet: #79b0ff; --haiku: #5fd3a5;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+button, textarea, input { font: inherit; color: inherit; }
+code { font-size: 0.9em; }
+.muted { color: var(--muted); }
+
+.app { display: grid; grid-template-columns: 330px 1fr; grid-template-rows: auto 1fr; height: 100vh; height: 100dvh; }
+.topbar { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--border); background: var(--panel); }
+.topbar h1 { font-size: 17px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.menu-button { display: none; }
+
+.sidebar { overflow-y: auto; border-right: 1px solid var(--border); background: var(--panel); padding: 12px; }
+.domain-heading { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 18px 6px 6px; }
+.team-button, .agent-card {
+  display: flex; gap: 10px; align-items: flex-start; width: 100%; text-align: left; border: 1px solid transparent;
+  background: none; padding: 8px; border-radius: 10px; cursor: pointer;
+}
+.team-button { border-color: var(--border); background: var(--accent-soft); padding: 12px; align-items: center; }
+.team-button strong { display: block; }
+.team-sub { font-size: 13px; color: var(--muted); }
+.agent-card:hover, .team-button:hover { border-color: var(--border); }
+.agent-card.selected, .team-button.selected { border-color: var(--accent); background: var(--accent-soft); }
+.agent-card-text { display: flex; flex-direction: column; min-width: 0; }
+.agent-card-top { display: flex; gap: 6px; align-items: center; }
+.agent-title { font-size: 13px; }
+.agent-voice { font-size: 12px; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.avatar { flex: none; border-radius: 50%; display: inline-grid; place-items: center; color: #fff; font-weight: 600; background: var(--accent); }
+.avatar.domain-coordination { background: var(--d-coordination); }
+.avatar.domain-strategy-business { background: var(--d-strategy-business); }
+.avatar.domain-technical { background: var(--d-technical); }
+.avatar.domain-operations { background: var(--d-operations); }
+.avatar.domain-finance { background: var(--d-finance); }
+.avatar.domain-legal-risk { background: var(--d-legal-risk); }
+.avatar.domain-marketing { background: var(--d-marketing); }
+
+.badge { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; border: 1px solid currentColor; vertical-align: middle; }
+.model-opus { color: var(--opus); } .model-sonnet { color: var(--sonnet); } .model-haiku { color: var(--haiku); }
+
+.chat { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.chat-header { display: flex; gap: 12px; align-items: flex-start; padding: 14px 20px; border-bottom: 1px solid var(--border); background: var(--panel); }
+.chat-header > div { flex: 1; min-width: 0; }
+.chat-header h2 { font-size: 17px; margin: 0 0 4px; }
+.chat-header p { margin: 0; font-size: 13px; }
+.ghost { background: none; border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; white-space: nowrap; }
+
+.messages { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+.empty { margin: auto; max-width: 520px; text-align: center; color: var(--muted); }
+.msg { display: flex; gap: 10px; max-width: 900px; width: 100%; }
+.msg.user { justify-content: flex-end; margin-left: auto; }
+.msg.user .bubble { background: var(--user); color: var(--user-text); border-radius: 14px 14px 4px 14px; padding: 10px 14px; white-space: pre-wrap; max-width: 75%; }
+.msg.assistant .bubble { background: var(--panel); border: 1px solid var(--border); border-radius: 14px 14px 14px 4px; padding: 10px 16px; min-width: 0; flex: 1; }
+.msg-author { font-weight: 600; font-size: 13px; margin-bottom: 2px; }
+.markdown { overflow-wrap: anywhere; }
+.markdown table { border-collapse: collapse; display: block; overflow-x: auto; margin: 8px 0; }
+.markdown th, .markdown td { border: 1px solid var(--border); padding: 5px 9px; text-align: left; vertical-align: top; }
+.markdown th { background: var(--panel-2); }
+.markdown pre { background: var(--panel-2); padding: 10px; border-radius: 8px; overflow-x: auto; }
+.markdown h1, .markdown h2, .markdown h3 { font-size: 1.05em; margin: 14px 0 6px; }
+.typing { animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .4; } }
+.error { color: var(--error); }
+
+.progress { font-size: 14px; }
+.expert-status { list-style: none; padding: 0; margin: 4px 0 8px; display: grid; gap: 4px; }
+.expert-status li { display: flex; align-items: center; gap: 8px; }
+.status-label { margin-left: auto; font-size: 12px; color: var(--muted); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--border); flex: none; }
+.status-working .dot { background: var(--accent); animation: pulse 1s infinite; }
+.status-done .dot { background: var(--haiku); }
+.status-error .dot { background: var(--error); }
+.steps { margin: 0 0 6px; padding-left: 20px; color: var(--muted); font-size: 13px; }
+details { margin-top: 8px; }
+summary { cursor: pointer; color: var(--accent); font-size: 14px; }
+.expert-report { border-top: 1px solid var(--border); margin-top: 10px; padding-top: 6px; }
+.expert-report h4 { margin: 6px 0; }
+
+.password { margin: 0 20px 10px; padding: 12px; border: 1px solid var(--accent); border-radius: 10px; background: var(--accent-soft); }
+.password .row { display: flex; gap: 8px; margin-top: 8px; }
+.password input { flex: 1; padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); }
+
+.composer { display: flex; gap: 10px; padding: 12px 20px 16px; border-top: 1px solid var(--border); background: var(--panel); }
+.composer textarea { flex: 1; resize: none; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); }
+.composer button, .password button { background: var(--accent); color: #fff; border: 0; border-radius: 10px; padding: 0 18px; cursor: pointer; font-weight: 600; }
+.composer button:disabled { opacity: .5; cursor: default; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 800px) {
+  .app { grid-template-columns: 1fr; }
+  .topbar { padding: 10px 16px; }
+  .topbar h1 .muted { display: none; }
+  .menu-button { display: inline-block; background: none; border: 1px solid var(--border); border-radius: 8px; padding: 4px 10px; }
+  .sidebar { display: none; position: fixed; inset: 49px 0 0 0; z-index: 10; border-right: 0; }
+  .sidebar.open { display: block; }
+  .chat-header, .messages, .composer { padding-left: 16px; padding-right: 16px; }
+  .msg.user .bubble { max-width: 90%; }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "experts21-web",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Chat with the Experts21 Shopify dropshipping advisory team",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "generate": "node scripts/build-agents.mjs",
+    "dev": "npm run generate && vite",
+    "build": "npm run generate && vite build",
+    "preview": "vite preview",
+    "test:local": "node scripts/test-local.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.6.0",
+    "@netlify/blobs": "11.1.8",
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.2.1",
+    "vite": "8.3.6"
+  }
+}
