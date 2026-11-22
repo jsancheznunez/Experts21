@@ -32,6 +32,7 @@ The research is turned into a working team of Claude Code agents:
 
 - **[expert-roster.md](expert-roster.md)** — 28 agents (26 domain experts across business, technical, operations, finance, legal and marketing, plus an orchestrator and a meta "team architect"), the 40 skills they share, and an agent × skill matrix.
 - Agents live in [`.claude/agents/`](../.claude/agents/), skills in [`.claude/skills/`](../.claude/skills/). How to use the team: [`CLAUDE.md`](../CLAUDE.md).
+- [how-to-talk-to-your-experts.md](how-to-talk-to-your-experts.md) — example prompts for one expert, a coordinated panel, or the whole team.
 - [06-staffing.md](06-staffing.md) explains how the roles map to business functions.
 
 ## Caveats
