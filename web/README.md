@@ -109,6 +109,7 @@ node scripts/test-local.mjs team "Keep the panel small: is a $39.95 dog harness 
 | "The team run never started" | Open **Logs → Functions → team-run** in Netlify. Check that background functions are available on your plan and that `APP_PASSWORD` matches |
 | Password prompt keeps coming back | The password doesn't match `APP_PASSWORD`; clear it with your browser's site data |
 | An agent or knowledge change isn't showing | Push to `main` (or trigger a deploy); data is read at build time |
+| Can't find **Trigger deploy** to redeploy | Open **Deploys**, click the latest deploy and use **Retry** / **Options → Retry deploy**, or push any change to `main` (Netlify rebuilds automatically when the project is linked to the GitHub repo) |
 
 ## Security notes
 
