@@ -5,7 +5,7 @@ Usage:
   python3 .claude/scripts/export_agent_skill.py creative-director [--slug zoe-creative-director]
 
 Builds exports/<slug>/ and exports/<slug>.zip:
-  SKILL.md                 front matter with only name + description (what claude.ai accepts),
+  SKILL.md                 front matter with only name + description (max 200 chars; what claude.ai accepts),
                            then the agent's persona, instructions and output format, adapted to run standalone
   references/skills/       every skill the agent preloads (front matter removed)
   references/research/     the docs/ files the agent and its skills rely on
@@ -19,6 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+MAX_DESC = 200  # claude.ai limit for skill descriptions
 
 
 def split_fm(text):
@@ -63,6 +64,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("agent")
     ap.add_argument("--slug")
+    ap.add_argument("--description", help="custom description (max 200 characters)")
     args = ap.parse_args()
 
     agent_file = ROOT / ".claude" / "agents" / f"{args.agent}.md"
@@ -144,11 +146,15 @@ Your skills sometimes mention other team skills or experts (for example unit-eco
 """
     skill_md_body = header + b.strip() + "\n"
 
-    desc = (f"{first}, a creative director for Shopify dropshipping brands. " if args.agent == "creative-director"
-            else f"{first}, the {title} from a Shopify dropshipping advisory team. ")
-    desc += agent_desc.replace("Use for ", "Use for ", 1)
+    # claude.ai limits skill descriptions to 200 characters: trim the agent's description at a comma boundary
+    if args.description:
+        desc = args.description
+    else:
+        desc = f"{first}, {title} for Shopify dropshipping stores. " + agent_desc
+        while len(desc) > MAX_DESC and ", " in desc:
+            desc = desc[: desc.rindex(", ")].rstrip(".:") + "."
     desc = desc.replace("<", "(").replace(">", ")")
-    assert len(desc) <= 1024, len(desc)
+    assert len(desc) <= MAX_DESC, f"description is {len(desc)} chars; claude.ai allows {MAX_DESC}. Use --description."
     skill_md = "---\n" + f"name: {slug}\n" + "description: " + '"' + desc.replace('"', '\\"') + '"' + "\n---\n\n" + skill_md_body
     (out / "SKILL.md").write_text(skill_md, encoding="utf-8")
 
