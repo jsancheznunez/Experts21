@@ -13,7 +13,8 @@ This project is a team of **28 Claude Code agents** that advise a consultant on 
 
 ```
 CLAUDE.md                     this file
-docs/                         research (README index, 01–08 topic files) and expert-roster.md
+docs/                         research (README index, 01–08 topic files), expert-roster.md, agent-brains.md, how-to guide
+knowledge/<agent-name>/       each agent's own documents, read before every answer
 .claude/agents/               28 subagents (one .md file each)
 .claude/skills/<name>/SKILL.md  40 skills, preloaded into agents via the `skills:` field
 .claude/scripts/validate_team.py  checks agent and skill wiring
@@ -32,7 +33,9 @@ deliverables/                 outputs the team saves (created on demand)
 | **Legal & Risk** | `ecommerce-compliance-counsel` · `corporate-ip-counsel` · `risk-manager` |
 | **Marketing** | `paid-social-media-buyer` · `creative-director` · `conversion-copywriter` · `retention-marketer` · `search-shopping-marketer` · `social-commerce-manager` |
 
-Each role's job description, skills and source docs are in [`docs/expert-roster.md`](docs/expert-roster.md). The routing table (which expert for which question, and standard panels) is in [`.claude/skills/expert-routing/SKILL.md`](.claude/skills/expert-routing/SKILL.md).
+Each role's job description, skills and source docs are in [`docs/expert-roster.md`](docs/expert-roster.md); each agent's model, first name, voice and working style are in [`docs/agent-brains.md`](docs/agent-brains.md).
+
+**Knowledge folders:** drop your own documents (supplier quotes, P&L exports, policies, brand guide…) into `knowledge/<agent-name>/`. That agent reads them before every answer, and they take priority over the general research in `docs/`. See [`knowledge/README.md`](knowledge/README.md). Never put credentials or customer personal data there. The routing table (which expert for which question, and standard panels) is in [`.claude/skills/expert-routing/SKILL.md`](.claude/skills/expert-routing/SKILL.md).
 
 ### How the orchestrator works
 1. **Triage:** restates the question, fills gaps with stated assumptions.
@@ -72,14 +75,15 @@ After any manual edit, run the validator:
 ```bash
 python3 .claude/scripts/validate_team.py --map
 ```
-It checks frontmatter (including valid YAML, since Claude Code skips agents whose YAML doesn't parse), names, that every listed skill exists and can be preloaded, that every agent is in the routing table, and that the team stays within 10–50 agents. `--map` prints which agents use each skill.
+It checks frontmatter (including valid YAML, since Claude Code skips agents whose YAML doesn't parse), models, knowledge folders, names, that every listed skill exists and can be preloaded, that every agent is in the routing table, and that the team stays within 10–50 agents. `--map` prints which agents use each skill.
 
 Authoring conventions:
 - One file per agent in `.claude/agents/<name>.md`. Lowercase-hyphenated names, same as the filename. Quote any `description` that contains `: `.
 - Every expert uses the same prompt sections: Read first · Responsibilities · How you work · Deliverable · Hand-offs · Guardrails.
 - Skills live in `.claude/skills/<name>/SKILL.md`, with `metadata.id` set to `S##`. Keep them concise (they're preloaded on every run). Never set `disable-model-invocation: true` on a skill that agents preload.
 - Agent tool access is minimal. Research agents get `Read, Grep, Glob, WebSearch, WebFetch`. Agents that save deliverables add `Write, Edit`. Only agents that need calculations or CLIs add `Bash`. Only `orchestrator` has `Agent`.
-- `model` is not set, so agents use the session's model. Set `model: sonnet` or `haiku` on an agent to cut cost.
+- Every agent sets `model:`: **opus** (7) for deep strategy, legal and finance judgment plus the orchestrator and team-architect; **sonnet** (18) for most specialist work; **haiku** (3) for fast template and lookup work. Reasons are in [`docs/agent-brains.md`](docs/agent-brains.md).
+- Every agent has a first name, voice and working style (**Who you are** section; tone only) and reads its folder in `knowledge/<agent-name>/` before answering.
 
 ## Team guardrails (apply to every agent)
 

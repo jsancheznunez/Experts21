@@ -36,6 +36,7 @@ SKILL_FIELDS = {
     "metadata", "license", "compatibility",
 }
 COLORS = {"red", "blue", "green", "yellow", "purple", "orange", "pink", "cyan"}
+MODELS = {"opus", "sonnet", "haiku", "fable", "inherit"}
 MIN_AGENTS, MAX_AGENTS = 10, 50
 
 errors, warnings = [], []
@@ -151,6 +152,7 @@ def load_skills():
 
 def load_agents(skills):
     agents = {}
+    persona_names = {}
     if not AGENTS_DIR.is_dir():
         errors.append(".claude/agents/ not found")
         return agents
@@ -179,6 +181,21 @@ def load_agents(skills):
         color = fm.get("color")
         if color and color not in COLORS:
             errors.append(f"{rel(f)}: invalid color '{color}'")
+        model = fm.get("model")
+        if not model:
+            errors.append(f"{rel(f)}: missing model (set opus, sonnet or haiku; see docs/agent-brains.md)")
+        elif model not in MODELS and not model.startswith("claude-"):
+            errors.append(f"{rel(f)}: unrecognized model '{model}'")
+        kdir = ROOT / "knowledge" / name
+        if not (kdir / "README.md").is_file():
+            errors.append(f"{rel(f)}: missing knowledge folder README at knowledge/{name}/README.md")
+        if f"knowledge/{name}/" not in body:
+            errors.append(f"{rel(f)}: prompt does not tell the agent to read knowledge/{name}/")
+        m = re.search(r"Your name is \*\*([^*]+)\*\*", body)
+        if not m:
+            errors.append(f"{rel(f)}: missing 'Who you are' personality (Your name is **Name**)")
+        else:
+            persona_names.setdefault(m.group(1), []).append(name)
         agent_skills = as_list(fm.get("skills"))
         if len(agent_skills) > 32:
             errors.append(f"{rel(f)}: more than 32 skills (only the first 32 load)")
@@ -190,6 +207,15 @@ def load_agents(skills):
         if not body.strip():
             errors.append(f"{rel(f)}: empty system prompt body")
         agents[name] = {"file": f, "skills": agent_skills, "tools": tools}
+    for first, owners in persona_names.items():
+        if len(owners) > 1:
+            errors.append(f"first name '{first}' is used by several agents: {', '.join(owners)}")
+    brains = ROOT / "docs" / "agent-brains.md"
+    if brains.is_file():
+        text = brains.read_text(encoding="utf-8")
+        for name in agents:
+            if f"`{name}`" not in text:
+                warnings.append(f"agent '{name}' is missing from docs/agent-brains.md")
     n = len(agents)
     if not MIN_AGENTS <= n <= MAX_AGENTS:
         errors.append(f"team has {n} agents; target range is {MIN_AGENTS}-{MAX_AGENTS}")
