@@ -16,6 +16,7 @@ Background research for opening a Shopify store that sells dropshipped products 
 | 6 | Staffing | [06-staffing.md](06-staffing.md) | Founder + AI agents + freelancers/VAs; humans approve spend, claims, disputes and supplier deals |
 | 7 | Marketing | [07-marketing.md](07-marketing.md) | Meta + TikTok paid social with UGC creative, Klaviyo email/SMS from day one; Shopify median conversion ~1.4% |
 | 8 | Biggest risks | [08-risks.md](08-risks.md) | Unprofitable ads, payout holds, chargebacks, supplier failure, tariffs, FTC rules; 80–90% of stores fail in year one |
+| 9 | NLP for the store (NLTK & spaCy) | [09-nlp-text-analysis.md](09-nlp-text-analysis.md) | NLTK for word frequency, VADER sentiment and collocations; spaCy for entities (with a custom EntityRuler), noun chunks, lemmas and dependency parses. Both run in the app's NLP Lab |
 
 ## Recommended strategy
 
@@ -30,7 +31,7 @@ Background research for opening a Shopify store that sells dropshipped products 
 
 The research is turned into a working team of Claude Code agents:
 
-- **[expert-roster.md](expert-roster.md)** — 28 agents (26 domain experts across business, technical, operations, finance, legal and marketing, plus an orchestrator and a meta "team architect"), the 40 skills they share, and an agent × skill matrix.
+- **[expert-roster.md](expert-roster.md)** — 30 agents (28 domain experts across business, technical, operations, finance, legal and marketing, plus an orchestrator and a meta "team architect"), the 42 skills they share, and an agent × skill matrix.
 - Agents live in [`.claude/agents/`](../.claude/agents/), skills in [`.claude/skills/`](../.claude/skills/). How to use the team: [`CLAUDE.md`](../CLAUDE.md).
 - [agent-brains.md](agent-brains.md) — each agent's model (opus/sonnet/haiku) and why, plus its first name, voice and working style.
 - [`knowledge/`](../knowledge/README.md) — one folder per agent for your own documents; each agent reads its folder before answering.

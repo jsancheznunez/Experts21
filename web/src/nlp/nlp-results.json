@@ -1,0 +1,2863 @@
+{
+ "meta": {
+  "generatedAt": "2026-11-25T18:27:26+00:00",
+  "python": "3.13.18",
+  "nltkVersion": "3.10.4",
+  "nltkData": [
+   "punkt_tab",
+   "stopwords",
+   "vader_lexicon"
+  ],
+  "spacyVersion": "3.8.18",
+  "spacyModel": "en_core_web_sm 3.8.0",
+  "documents": [
+   {
+    "file": "docs/01-market.md",
+    "title": "01 — The Market",
+    "characters": 2434
+   },
+   {
+    "file": "docs/02-high-demand-products.md",
+    "title": "02 — High-Demand Products",
+    "characters": 2867
+   },
+   {
+    "file": "docs/03-target-customers.md",
+    "title": "03 — Target Customers",
+    "characters": 2329
+   },
+   {
+    "file": "docs/04-competitors.md",
+    "title": "04 — Competitors",
+    "characters": 2746
+   },
+   {
+    "file": "docs/05-startup-and-operating-costs.md",
+    "title": "05 — Startup and Operating Costs",
+    "characters": 2595
+   },
+   {
+    "file": "docs/06-staffing.md",
+    "title": "06 — Staffing",
+    "characters": 2490
+   },
+   {
+    "file": "docs/07-marketing.md",
+    "title": "07 — Marketing",
+    "characters": 3234
+   },
+   {
+    "file": "docs/08-risks.md",
+    "title": "08 — Biggest Risks",
+    "characters": 4116
+   },
+   {
+    "file": "docs/09-nlp-text-analysis.md",
+    "title": "09 — NLP for the Store: NLTK and spaCy",
+    "characters": 3955
+   }
+  ]
+ },
+ "nltk": {
+  "stopwordsRemoved": 787,
+  "extraStopwords": [
+   "also",
+   "etc",
+   "may",
+   "one",
+   "per",
+   "see",
+   "via"
+  ],
+  "topWordsOverall": [
+   [
+    "product",
+    22
+   ],
+   [
+    "tiktok",
+    19
+   ],
+   [
+    "reviews",
+    18
+   ],
+   [
+    "shopify",
+    17
+   ],
+   [
+    "order",
+    16
+   ],
+   [
+    "shipping",
+    15
+   ],
+   [
+    "supplier",
+    14
+   ],
+   [
+    "products",
+    14
+   ],
+   [
+    "ads",
+    13
+   ],
+   [
+    "stores",
+    13
+   ],
+   [
+    "customer",
+    12
+   ],
+   [
+    "shop",
+    12
+   ],
+   [
+    "social",
+    12
+   ],
+   [
+    "app",
+    12
+   ],
+   [
+    "days",
+    11
+   ],
+   [
+    "paid",
+    11
+   ],
+   [
+    "store",
+    11
+   ],
+   [
+    "founder",
+    11
+   ],
+   [
+    "research",
+    10
+   ],
+   [
+    "price",
+    10
+   ],
+   [
+    "claims",
+    10
+   ],
+   [
+    "home",
+    10
+   ],
+   [
+    "creative",
+    10
+   ],
+   [
+    "brand",
+    9
+   ],
+   [
+    "quality",
+    9
+   ]
+  ],
+  "bigramCollocations": [
+   [
+    "tiktok shop",
+    10
+   ],
+   [
+    "noun chunks",
+    4
+   ],
+   [
+    "named entities",
+    3
+   ],
+   [
+    "sales tax",
+    4
+   ],
+   [
+    "customer service",
+    4
+   ],
+   [
+    "hero products",
+    4
+   ],
+   [
+    "doba topdawg",
+    2
+   ],
+   [
+    "economic nexus",
+    2
+   ],
+   [
+    "exclusive variants",
+    2
+   ],
+   [
+    "money percent",
+    2
+   ],
+   [
+    "natural language",
+    2
+   ],
+   [
+    "org money",
+    2
+   ],
+   [
+    "project uses",
+    2
+   ],
+   [
+    "triple whale",
+    2
+   ],
+   [
+    "warning letters",
+    2
+   ],
+   [
+    "entities org",
+    2
+   ],
+   [
+    "free tier",
+    2
+   ],
+   [
+    "klaviyo flows",
+    2
+   ],
+   [
+    "unit economics",
+    2
+   ],
+   [
+    "social proof",
+    3
+   ]
+  ],
+  "trigramCollocations": [
+   [
+    "spacy noun chunks",
+    2
+   ],
+   [
+    "named entities org",
+    2
+   ],
+   [
+    "org money percent",
+    2
+   ],
+   [
+    "entities org money",
+    2
+   ],
+   [
+    "influencers must disclose",
+    2
+   ],
+   [
+    "consumer review rule",
+    2
+   ],
+   [
+    "free tier paid",
+    2
+   ],
+   [
+    "tools minea sell",
+    2
+   ],
+   [
+    "freelance media buyer",
+    2
+   ],
+   [
+    "ftc consumer review",
+    2
+   ]
+  ],
+  "documents": [
+   {
+    "file": "docs/01-market.md",
+    "title": "01 — The Market",
+    "sentences": 35,
+    "tokens": 508,
+    "words": 305,
+    "uniqueContentWords": 161,
+    "lexicalDiversity": 0.666,
+    "topWords": [
+     [
+      "market",
+      7
+     ],
+     [
+      "growth",
+      5
+     ],
+     [
+      "china",
+      4
+     ],
+     [
+      "store",
+      4
+     ],
+     [
+      "parcel",
+      3
+     ],
+     [
+      "global",
+      2
+     ],
+     [
+      "research",
+      2
+     ],
+     [
+      "every",
+      2
+     ],
+     [
+      "forecasts",
+      2
+     ],
+     [
+      "minimis",
+      2
+     ],
+     [
+      "aliexpress",
+      2
+     ],
+     [
+      "increasingly",
+      2
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": 0.096,
+     "label": "positive",
+     "positiveShare": 0.241,
+     "negativeShare": 0.0,
+     "mostPositive": {
+      "text": "Growth now comes from taking share.",
+      "compound": 0.5859
+     },
+     "mostNegative": {
+      "text": "Global Market Insights; $290.7B; ~$343B; 20.6% (2026–2035).",
+      "compound": 0.0
+     }
+    }
+   },
+   {
+    "file": "docs/02-high-demand-products.md",
+    "title": "02 — High-Demand Products",
+    "sentences": 30,
+    "tokens": 552,
+    "words": 331,
+    "uniqueContentWords": 219,
+    "lexicalDiversity": 0.743,
+    "topWords": [
+     [
+      "tools",
+      6
+     ],
+     [
+      "accessories",
+      5
+     ],
+     [
+      "products",
+      4
+     ],
+     [
+      "claims",
+      4
+     ],
+     [
+      "high",
+      4
+     ],
+     [
+      "sizing",
+      3
+     ],
+     [
+      "returns",
+      3
+     ],
+     [
+      "home",
+      3
+     ],
+     [
+      "shipping",
+      3
+     ],
+     [
+      "cost",
+      3
+     ],
+     [
+      "low",
+      3
+     ],
+     [
+      "product",
+      3
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": 0.081,
+     "label": "positive",
+     "positiveShare": 0.385,
+     "negativeShare": 0.269,
+     "mostPositive": {
+      "text": "Wellness & sleep; Sleep masks, mouth tape, posture correctors, massage tools, at-home wellness kits; High perceived value, consumable re-orders; Health claims are regulated (FTC/FDA).",
+      "compound": 0.802
+     },
+     "mostNegative": {
+      "text": "Low return/defect risk — small, light, non-fragile, no sizing complexity, no batteries if possible.",
+      "compound": -0.765
+     }
+    }
+   },
+   {
+    "file": "docs/03-target-customers.md",
+    "title": "03 — Target Customers",
+    "sentences": 33,
+    "tokens": 491,
+    "words": 302,
+    "uniqueContentWords": 163,
+    "lexicalDiversity": 0.666,
+    "topWords": [
+     [
+      "social",
+      7
+     ],
+     [
+      "tiktok",
+      7
+     ],
+     [
+      "shop",
+      4
+     ],
+     [
+      "gen",
+      4
+     ],
+     [
+      "pet",
+      4
+     ],
+     [
+      "home",
+      4
+     ],
+     [
+      "customers",
+      3
+     ],
+     [
+      "buy",
+      3
+     ],
+     [
+      "facebook",
+      3
+     ],
+     [
+      "wellness",
+      3
+     ],
+     [
+      "instagram",
+      3
+     ],
+     [
+      "proof",
+      3
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": 0.187,
+     "label": "positive",
+     "positiveShare": 0.379,
+     "negativeShare": 0.034,
+     "mostPositive": {
+      "text": "Good for comfort, wellness, home and gift products.",
+      "compound": 0.8807
+     },
+     "mostNegative": {
+      "text": "Mobile-first checkout: Shop Pay, Apple Pay, PayPal, buy-now-pay-later (Klarna/Afterpay) for $50+ orders.",
+      "compound": -0.2023
+     }
+    }
+   },
+   {
+    "file": "docs/04-competitors.md",
+    "title": "04 — Competitors",
+    "sentences": 33,
+    "tokens": 533,
+    "words": 351,
+    "uniqueContentWords": 195,
+    "lexicalDiversity": 0.655,
+    "topWords": [
+     [
+      "shipping",
+      6
+     ],
+     [
+      "products",
+      4
+     ],
+     [
+      "app",
+      4
+     ],
+     [
+      "supplier",
+      4
+     ],
+     [
+      "fulfillment",
+      4
+     ],
+     [
+      "shopify",
+      3
+     ],
+     [
+      "marketplaces",
+      3
+     ],
+     [
+      "stores",
+      3
+     ],
+     [
+      "prices",
+      3
+     ],
+     [
+      "quality",
+      3
+     ],
+     [
+      "brand",
+      3
+     ],
+     [
+      "aliexpress",
+      3
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": 0.143,
+     "label": "positive",
+     "positiveShare": 0.355,
+     "negativeShare": 0.097,
+     "mostPositive": {
+      "text": "Identify a gap: better bundle, better content, faster shipping, guarantee, niche focus.",
+      "compound": 0.7783
+     },
+     "mostNegative": {
+      "text": "AliExpress; Same supplier catalog dropshippers use; Slow shipping to the US, poor customer service.",
+      "compound": -0.4767
+     }
+    }
+   },
+   {
+    "file": "docs/05-startup-and-operating-costs.md",
+    "title": "05 — Startup and Operating Costs",
+    "sentences": 52,
+    "tokens": 607,
+    "words": 293,
+    "uniqueContentWords": 176,
+    "lexicalDiversity": 0.7,
+    "topWords": [
+     [
+      "shopify",
+      7
+     ],
+     [
+      "costs",
+      6
+     ],
+     [
+      "order",
+      5
+     ],
+     [
+      "app",
+      4
+     ],
+     [
+      "plan",
+      3
+     ],
+     [
+      "monthly",
+      3
+     ],
+     [
+      "product",
+      3
+     ],
+     [
+      "fixed",
+      3
+     ],
+     [
+      "sales",
+      3
+     ],
+     [
+      "tax",
+      3
+     ],
+     [
+      "startup",
+      2
+     ],
+     [
+      "operating",
+      2
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": 0.115,
+     "label": "positive",
+     "positiveShare": 0.321,
+     "negativeShare": 0.036,
+     "mostPositive": {
+      "text": "Product samples; Always order samples of hero products.",
+      "compound": 0.5574
+     },
+     "mostNegative": {
+      "text": "Start on Basic; move to Grow when monthly revenue reaches ~$10–15k (the lower card rate pays for the plan difference).",
+      "compound": -0.25
+     }
+    }
+   },
+   {
+    "file": "docs/06-staffing.md",
+    "title": "06 — Staffing",
+    "sentences": 28,
+    "tokens": 534,
+    "words": 267,
+    "uniqueContentWords": 144,
+    "lexicalDiversity": 0.644,
+    "topWords": [
+     [
+      "founder",
+      9
+     ],
+     [
+      "product",
+      5
+     ],
+     [
+      "supplier",
+      5
+     ],
+     [
+      "agent",
+      5
+     ],
+     [
+      "freelance",
+      4
+     ],
+     [
+      "media",
+      4
+     ],
+     [
+      "ugc",
+      4
+     ],
+     [
+      "stage",
+      3
+     ],
+     [
+      "research",
+      3
+     ],
+     [
+      "manager",
+      3
+     ],
+     [
+      "buyer",
+      3
+     ],
+     [
+      "video",
+      3
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": 0.139,
+     "label": "positive",
+     "positiveShare": 0.478,
+     "negativeShare": 0.13,
+     "mostPositive": {
+      "text": "Bookkeeping & tax; Reconciliation, sales tax, profit tracking; Profit app + accountant at year end; Monthly bookkeeper; Bookkeeper + CPA.",
+      "compound": 0.7003
+     },
+     "mostNegative": {
+      "text": "Chargeback and dispute responses (evidence, judgment).",
+      "compound": -0.4019
+     }
+    }
+   },
+   {
+    "file": "docs/07-marketing.md",
+    "title": "07 — Marketing",
+    "sentences": 35,
+    "tokens": 710,
+    "words": 379,
+    "uniqueContentWords": 224,
+    "lexicalDiversity": 0.691,
+    "topWords": [
+     [
+      "ads",
+      6
+     ],
+     [
+      "launch",
+      6
+     ],
+     [
+      "creative",
+      5
+     ],
+     [
+      "cpm",
+      4
+     ],
+     [
+      "tiktok",
+      4
+     ],
+     [
+      "median",
+      4
+     ],
+     [
+      "top",
+      4
+     ],
+     [
+      "ftc",
+      4
+     ],
+     [
+      "paid",
+      3
+     ],
+     [
+      "shopping",
+      3
+     ],
+     [
+      "checkout",
+      3
+     ],
+     [
+      "ugc",
+      3
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": 0.047,
+     "label": "neutral",
+     "positiveShare": 0.433,
+     "negativeShare": 0.267,
+     "mostPositive": {
+      "text": "Category: health & beauty converts higher (~3% top quartile) than electronics (~1.8%).",
+      "compound": 0.6808
+     },
+     "mostNegative": {
+      "text": "No fake reviews or bought testimonials — FTC Consumer Review Rule allows civil penalties up to ~$53,088 per violation; FTC sent warning letters in late 2025.",
+      "compound": -0.872
+     }
+    }
+   },
+   {
+    "file": "docs/08-risks.md",
+    "title": "08 — Biggest Risks",
+    "sentences": 41,
+    "tokens": 793,
+    "words": 510,
+    "uniqueContentWords": 323,
+    "lexicalDiversity": 0.727,
+    "topWords": [
+     [
+      "days",
+      5
+     ],
+     [
+      "stores",
+      4
+     ],
+     [
+      "rate",
+      4
+     ],
+     [
+      "ftc",
+      4
+     ],
+     [
+      "reviews",
+      4
+     ],
+     [
+      "within",
+      3
+     ],
+     [
+      "risk",
+      3
+     ],
+     [
+      "rules",
+      3
+     ],
+     [
+      "shopify",
+      3
+     ],
+     [
+      "tracking",
+      3
+     ],
+     [
+      "keep",
+      3
+     ],
+     [
+      "supplier",
+      3
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": -0.114,
+     "label": "negative",
+     "positiveShare": 0.273,
+     "negativeShare": 0.424,
+     "mostPositive": {
+      "text": "Chargebacks and refunds — \"item not received\", \"not as described\"; Realistic delivery promises, proactive tracking emails, quality samples, responsive support, chargeback alerts (e.g.",
+      "compound": 0.8625
+     },
+     "mostNegative": {
+      "text": "IP infringement — selling knockoffs, using trademarked names or stolen images; Own photos/videos; no branded knockoffs; trademark search on our brand name.",
+      "compound": -0.8176
+     }
+    }
+   },
+   {
+    "file": "docs/09-nlp-text-analysis.md",
+    "title": "09 — NLP for the Store: NLTK and spaCy",
+    "sentences": 50,
+    "tokens": 756,
+    "words": 519,
+    "uniqueContentWords": 243,
+    "lexicalDiversity": 0.582,
+    "topWords": [
+     [
+      "spacy",
+      7
+     ],
+     [
+      "reviews",
+      7
+     ],
+     [
+      "nltk",
+      6
+     ],
+     [
+      "nlp",
+      5
+     ],
+     [
+      "plus",
+      5
+     ],
+     [
+      "vader",
+      4
+     ],
+     [
+      "sentiment",
+      4
+     ],
+     [
+      "noun",
+      4
+     ],
+     [
+      "chunks",
+      4
+     ],
+     [
+      "gives",
+      4
+     ],
+     [
+      "business",
+      3
+     ],
+     [
+      "text",
+      3
+     ]
+    ],
+    "sentiment": {
+     "meanCompound": 0.017,
+     "label": "neutral",
+     "positiveShare": 0.217,
+     "negativeShare": 0.152,
+     "mostPositive": {
+      "text": "This project uses two open-source Python libraries, each for what it does best.",
+      "compound": 0.6369
+     },
+     "mostNegative": {
+      "text": "Negations and sarcasm can fool it.",
+      "compound": -0.5859
+     }
+    }
+   }
+  ]
+ },
+ "spacy": {
+  "pipeline": [
+   "tok2vec",
+   "tagger",
+   "parser",
+   "attribute_ruler",
+   "lemmatizer",
+   "entity_ruler",
+   "ner"
+  ],
+  "rulerPatterns": {
+   "PLATFORM": 23,
+   "REGULATION": 15,
+   "METRIC": 13
+  },
+  "entityLabelCounts": {
+   "PLATFORM": 113,
+   "ORG": 99,
+   "DATE": 69,
+   "GPE": 65,
+   "PERCENT": 43,
+   "MONEY": 39,
+   "REGULATION": 33,
+   "METRIC": 29
+  },
+  "topEntitiesByLabel": {
+   "PLATFORM": [
+    [
+     "Shopify",
+     15
+    ],
+    [
+     "TikTok",
+     12
+    ],
+    [
+     "TikTok Shop",
+     10
+    ],
+    [
+     "Meta",
+     10
+    ],
+    [
+     "Temu",
+     9
+    ],
+    [
+     "Amazon",
+     7
+    ],
+    [
+     "AliExpress",
+     6
+    ],
+    [
+     "Spocket",
+     4
+    ],
+    [
+     "Shein",
+     4
+    ],
+    [
+     "AutoDS",
+     4
+    ]
+   ],
+   "REGULATION": [
+    [
+     "FTC",
+     10
+    ],
+    [
+     "de minimis",
+     4
+    ],
+    [
+     "CPSC",
+     3
+    ],
+    [
+     "TCPA",
+     3
+    ],
+    [
+     "Consumer Review Rule",
+     2
+    ],
+    [
+     "CAN-SPAM",
+     2
+    ],
+    [
+     "GDPR",
+     2
+    ],
+    [
+     "De minimis",
+     1
+    ],
+    [
+     "Mail Order Rule",
+     1
+    ],
+    [
+     "Endorsement Guides",
+     1
+    ]
+   ],
+   "METRIC": [
+    [
+     "CPA",
+     6
+    ],
+    [
+     "ROAS",
+     4
+    ],
+    [
+     "CPM",
+     4
+    ],
+    [
+     "AOV",
+     3
+    ],
+    [
+     "contribution margin",
+     2
+    ],
+    [
+     "CPC",
+     2
+    ],
+    [
+     "break-even ROAS",
+     2
+    ],
+    [
+     "Break-even ROAS",
+     1
+    ],
+    [
+     "conversion rate",
+     1
+    ],
+    [
+     "CTR",
+     1
+    ]
+   ],
+   "ORG": [
+    [
+     "EU",
+     5
+    ],
+    [
+     "DTC",
+     4
+    ],
+    [
+     "UGC",
+     3
+    ],
+    [
+     "NLP",
+     3
+    ],
+    [
+     "EntityRuler",
+     3
+    ],
+    [
+     "NLTK",
+     3
+    ],
+    [
+     "EO",
+     2
+    ],
+    [
+     "YoY",
+     2
+    ],
+    [
+     "FDA",
+     2
+    ],
+    [
+     "Sell The Trend",
+     2
+    ]
+   ],
+   "MONEY": [
+    [
+     "0.30",
+     4
+    ],
+    [
+     "0",
+     3
+    ],
+    [
+     "290.7B",
+     1
+    ],
+    [
+     "405.7B",
+     1
+    ],
+    [
+     "492.5B",
+     1
+    ],
+    [
+     "414.9B",
+     1
+    ],
+    [
+     "507.2B",
+     1
+    ],
+    [
+     "543.5B",
+     1
+    ],
+    [
+     "689B",
+     1
+    ],
+    [
+     "roughly $340B–$545B",
+     1
+    ]
+   ],
+   "PERCENT": [
+    [
+     "10%",
+     5
+    ],
+    [
+     "20%",
+     3
+    ],
+    [
+     "10–20%",
+     2
+    ],
+    [
+     "10–15%",
+     2
+    ],
+    [
+     "20–30%",
+     2
+    ],
+    [
+     "20.6%",
+     1
+    ],
+    [
+     "21.4%",
+     1
+    ],
+    [
+     "21.7%",
+     1
+    ],
+    [
+     "22%",
+     1
+    ],
+    [
+     "23.2%",
+     1
+    ]
+   ],
+   "DATE": [
+    [
+     "2026",
+     14
+    ],
+    [
+     "weeks",
+     3
+    ],
+    [
+     "Monthly",
+     3
+    ],
+    [
+     "2–7 day",
+     2
+    ],
+    [
+     "2024",
+     2
+    ],
+    [
+     "monthly",
+     2
+    ],
+    [
+     "daily",
+     2
+    ],
+    [
+     "2–3 months",
+     2
+    ],
+    [
+     "weekly",
+     2
+    ],
+    [
+     "late 2025",
+     2
+    ]
+   ],
+   "GPE": [
+    [
+     "US",
+     32
+    ],
+    [
+     "China",
+     6
+    ],
+    [
+     "VA",
+     4
+    ],
+    [
+     "Minea",
+     2
+    ],
+    [
+     "AI",
+     2
+    ],
+    [
+     "Philippines",
+     2
+    ],
+    [
+     "MONEY",
+     2
+    ],
+    [
+     "Hong Kong",
+     1
+    ],
+    [
+     "United States",
+     1
+    ],
+    [
+     "Canada",
+     1
+    ]
+   ]
+  },
+  "topNounChunks": [
+   [
+    "day",
+    10
+   ],
+   [
+    "product",
+    10
+   ],
+   [
+    "home",
+    9
+   ],
+   [
+    "store",
+    8
+   ],
+   [
+    "bundle",
+    7
+   ],
+   [
+    "price",
+    7
+   ],
+   [
+    "review",
+    7
+   ],
+   [
+    "order",
+    7
+   ],
+   [
+    "return",
+    6
+   ],
+   [
+    "week",
+    6
+   ],
+   [
+    "supplier",
+    5
+   ],
+   [
+    "tiktok shop",
+    5
+   ],
+   [
+    "customer",
+    5
+   ],
+   [
+    "tiktok",
+    5
+   ],
+   [
+    "brand",
+    5
+   ],
+   [
+    "email",
+    5
+   ],
+   [
+    "competitor",
+    5
+   ],
+   [
+    "item",
+    5
+   ],
+   [
+    "launch",
+    5
+   ],
+   [
+    "founder",
+    5
+   ]
+  ],
+  "topVerbLemmas": [
+   [
+    "pay",
+    14
+   ],
+   [
+    "buy",
+    11
+   ],
+   [
+    "sell",
+    9
+   ],
+   [
+    "use",
+    7
+   ],
+   [
+    "add",
+    6
+   ],
+   [
+    "grow",
+    4
+   ],
+   [
+    "set",
+    4
+   ],
+   [
+    "work",
+    4
+   ],
+   [
+    "run",
+    4
+   ],
+   [
+    "start",
+    4
+   ],
+   [
+    "find",
+    4
+   ],
+   [
+    "target",
+    4
+   ],
+   [
+    "name",
+    4
+   ],
+   [
+    "give",
+    4
+   ],
+   [
+    "end",
+    3
+   ]
+  ],
+  "topAdjectiveLemmas": [
+   [
+    "high",
+    11
+   ],
+   [
+    "low",
+    11
+   ],
+   [
+    "social",
+    11
+   ],
+   [
+    "creative",
+    8
+   ],
+   [
+    "fast",
+    7
+   ],
+   [
+    "small",
+    6
+   ],
+   [
+    "slow",
+    6
+   ],
+   [
+    "large",
+    5
+   ],
+   [
+    "free",
+    5
+   ],
+   [
+    "good",
+    5
+   ]
+  ],
+  "lemmaExample": {
+   "sentence": "Every parcel shipped direct from China to a US buyer now pays duties and goes through formal-ish customs processing.",
+   "pairs": [
+    [
+     "shipped",
+     "ship"
+    ],
+    [
+     "pays",
+     "pay"
+    ],
+    [
+     "duties",
+     "duty"
+    ],
+    [
+     "goes",
+     "go"
+    ],
+    [
+     "customs",
+     "custom"
+    ]
+   ]
+  },
+  "dependencyParses": [
+   {
+    "sentence": "De minimis parcel volumes fell about a third after the China change.",
+    "tokens": [
+     {
+      "i": 0,
+      "text": "De",
+      "lemma": "De",
+      "pos": "PROPN",
+      "tag": "NNP",
+      "dep": "compound",
+      "head": 1
+     },
+     {
+      "i": 1,
+      "text": "minimis",
+      "lemma": "minimis",
+      "pos": "PROPN",
+      "tag": "NNP",
+      "dep": "compound",
+      "head": 3
+     },
+     {
+      "i": 2,
+      "text": "parcel",
+      "lemma": "parcel",
+      "pos": "PROPN",
+      "tag": "NNP",
+      "dep": "compound",
+      "head": 3
+     },
+     {
+      "i": 3,
+      "text": "volumes",
+      "lemma": "volume",
+      "pos": "NOUN",
+      "tag": "NNS",
+      "dep": "nsubj",
+      "head": 4
+     },
+     {
+      "i": 4,
+      "text": "fell",
+      "lemma": "fall",
+      "pos": "VERB",
+      "tag": "VBD",
+      "dep": "ROOT",
+      "head": 4
+     },
+     {
+      "i": 5,
+      "text": "about",
+      "lemma": "about",
+      "pos": "ADV",
+      "tag": "RB",
+      "dep": "advmod",
+      "head": 7
+     },
+     {
+      "i": 6,
+      "text": "a",
+      "lemma": "a",
+      "pos": "DET",
+      "tag": "DT",
+      "dep": "quantmod",
+      "head": 7
+     },
+     {
+      "i": 7,
+      "text": "third",
+      "lemma": "third",
+      "pos": "NOUN",
+      "tag": "NN",
+      "dep": "npadvmod",
+      "head": 8
+     },
+     {
+      "i": 8,
+      "text": "after",
+      "lemma": "after",
+      "pos": "ADP",
+      "tag": "IN",
+      "dep": "prep",
+      "head": 4
+     },
+     {
+      "i": 9,
+      "text": "the",
+      "lemma": "the",
+      "pos": "DET",
+      "tag": "DT",
+      "dep": "det",
+      "head": 11
+     },
+     {
+      "i": 10,
+      "text": "China",
+      "lemma": "China",
+      "pos": "PROPN",
+      "tag": "NNP",
+      "dep": "compound",
+      "head": 11
+     },
+     {
+      "i": 11,
+      "text": "change",
+      "lemma": "change",
+      "pos": "NOUN",
+      "tag": "NN",
+      "dep": "pobj",
+      "head": 8
+     },
+     {
+      "i": 12,
+      "text": ".",
+      "lemma": ".",
+      "pos": "PUNCT",
+      "tag": ".",
+      "dep": "punct",
+      "head": 4
+     }
+    ],
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:lang=\"en\" id=\"a59940bcd41b41d4b68a127673f0c72a-0\" class=\"displacy\" width=\"1190\" height=\"279.5\" direction=\"ltr\" style=\"max-width: none; height: 279.5px; color: currentColor; background: transparent; font-family: inherit; direction: ltr\">\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"50\">De</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"50\">PROPN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"145\">minimis</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"145\">PROPN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"240\">parcel</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"240\">PROPN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"335\">volumes</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"335\">NOUN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"430\">fell</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"430\">VERB</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"525\">about</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"525\">ADV</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"620\">a</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"620\">DET</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"715\">third</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"715\">NOUN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"810\">after</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"810\">ADP</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"905\">the</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"905\">DET</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"1000\">China</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"1000\">PROPN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"1095\">change.</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"1095\">NOUN</tspan>\n</text>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-0\" stroke-width=\"2px\" d=\"M62,144.5 62,128.66666666666666 139.0,128.66666666666666 139.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-0\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">compound</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M62,146.5 L58,138.5 66,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-1\" stroke-width=\"2px\" d=\"M157,144.5 157,112.83333333333333 332.0,112.83333333333333 332.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-1\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">compound</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M157,146.5 L153,138.5 161,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-2\" stroke-width=\"2px\" d=\"M252,144.5 252,128.66666666666666 329.0,128.66666666666666 329.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-2\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">compound</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M252,146.5 L248,138.5 256,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-3\" stroke-width=\"2px\" d=\"M347,144.5 347,128.66666666666666 424.0,128.66666666666666 424.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-3\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">nsubj</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M347,146.5 L343,138.5 351,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-4\" stroke-width=\"2px\" d=\"M537,144.5 537,112.83333333333333 712.0,112.83333333333333 712.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-4\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">advmod</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M537,146.5 L533,138.5 541,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-5\" stroke-width=\"2px\" d=\"M632,144.5 632,128.66666666666666 709.0,128.66666666666666 709.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-5\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">quantmod</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M632,146.5 L628,138.5 636,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-6\" stroke-width=\"2px\" d=\"M727,144.5 727,128.66666666666666 804.0,128.66666666666666 804.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-6\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">npadvmod</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M727,146.5 L723,138.5 731,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-7\" stroke-width=\"2px\" d=\"M442,144.5 442,97.0 810.0,97.0 810.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-7\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">prep</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M810.0,146.5 L814.0,138.5 806.0,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-8\" stroke-width=\"2px\" d=\"M917,144.5 917,112.83333333333333 1092.0,112.83333333333333 1092.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-8\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">det</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M917,146.5 L913,138.5 921,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-9\" stroke-width=\"2px\" d=\"M1012,144.5 1012,128.66666666666666 1089.0,128.66666666666666 1089.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-9\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">compound</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M1012,146.5 L1008,138.5 1016,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a59940bcd41b41d4b68a127673f0c72a-0-10\" stroke-width=\"2px\" d=\"M822,144.5 822,97.0 1095.0,97.0 1095.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a59940bcd41b41d4b68a127673f0c72a-0-10\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">pobj</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M1095.0,146.5 L1099.0,138.5 1091.0,138.5\" fill=\"currentColor\"/>\n</g>\n</svg>"
+   },
+   {
+    "sentence": "Fast delivery: 2–7 days is the norm set by Amazon/US warehouses.",
+    "tokens": [
+     {
+      "i": 0,
+      "text": "Fast",
+      "lemma": "fast",
+      "pos": "ADJ",
+      "tag": "JJ",
+      "dep": "amod",
+      "head": 1
+     },
+     {
+      "i": 1,
+      "text": "delivery",
+      "lemma": "delivery",
+      "pos": "NOUN",
+      "tag": "NN",
+      "dep": "dep",
+      "head": 5
+     },
+     {
+      "i": 2,
+      "text": ":",
+      "lemma": ":",
+      "pos": "PUNCT",
+      "tag": ":",
+      "dep": "punct",
+      "head": 5
+     },
+     {
+      "i": 3,
+      "text": "2–7",
+      "lemma": "2–7",
+      "pos": "NOUN",
+      "tag": "NN",
+      "dep": "compound",
+      "head": 4
+     },
+     {
+      "i": 4,
+      "text": "days",
+      "lemma": "day",
+      "pos": "NOUN",
+      "tag": "NNS",
+      "dep": "nsubj",
+      "head": 5
+     },
+     {
+      "i": 5,
+      "text": "is",
+      "lemma": "be",
+      "pos": "AUX",
+      "tag": "VBZ",
+      "dep": "ROOT",
+      "head": 5
+     },
+     {
+      "i": 6,
+      "text": "the",
+      "lemma": "the",
+      "pos": "DET",
+      "tag": "DT",
+      "dep": "det",
+      "head": 7
+     },
+     {
+      "i": 7,
+      "text": "norm",
+      "lemma": "norm",
+      "pos": "NOUN",
+      "tag": "NN",
+      "dep": "attr",
+      "head": 5
+     },
+     {
+      "i": 8,
+      "text": "set",
+      "lemma": "set",
+      "pos": "VERB",
+      "tag": "VBN",
+      "dep": "acl",
+      "head": 7
+     },
+     {
+      "i": 9,
+      "text": "by",
+      "lemma": "by",
+      "pos": "ADP",
+      "tag": "IN",
+      "dep": "agent",
+      "head": 8
+     },
+     {
+      "i": 10,
+      "text": "Amazon",
+      "lemma": "Amazon",
+      "pos": "PROPN",
+      "tag": "NNP",
+      "dep": "nmod",
+      "head": 12
+     },
+     {
+      "i": 11,
+      "text": "/",
+      "lemma": "/",
+      "pos": "SYM",
+      "tag": "SYM",
+      "dep": "punct",
+      "head": 12
+     },
+     {
+      "i": 12,
+      "text": "US",
+      "lemma": "US",
+      "pos": "PROPN",
+      "tag": "NNP",
+      "dep": "compound",
+      "head": 13
+     },
+     {
+      "i": 13,
+      "text": "warehouses",
+      "lemma": "warehouse",
+      "pos": "NOUN",
+      "tag": "NNS",
+      "dep": "pobj",
+      "head": 9
+     },
+     {
+      "i": 14,
+      "text": ".",
+      "lemma": ".",
+      "pos": "PUNCT",
+      "tag": ".",
+      "dep": "punct",
+      "head": 5
+     }
+    ],
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:lang=\"en\" id=\"7b22af95ff9544619412e16818bcf150-0\" class=\"displacy\" width=\"1190\" height=\"232.0\" direction=\"ltr\" style=\"max-width: none; height: 232.0px; color: currentColor; background: transparent; font-family: inherit; direction: ltr\">\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"50\">Fast</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"50\">ADJ</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"145\">delivery:</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"145\">NOUN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"240\">2–7</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"240\">NOUN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"335\">days</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"335\">NOUN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"430\">is</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"430\">AUX</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"525\">the</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"525\">DET</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"620\">norm</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"620\">NOUN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"715\">set</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"715\">VERB</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"810\">by</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"810\">ADP</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"905\">Amazon/</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"905\">PROPN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"1000\">US</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"1000\">PROPN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"142.0\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"1095\">warehouses.</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"1095\">NOUN</tspan>\n</text>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-0\" stroke-width=\"2px\" d=\"M62,97.0 62,81.16666666666667 142.0,81.16666666666667 142.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-0\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">amod</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M62,99.0 L58,91.0 66,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-1\" stroke-width=\"2px\" d=\"M157,97.0 157,65.33333333333333 430.0,65.33333333333333 430.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-1\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">dep</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M157,99.0 L153,91.0 161,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-2\" stroke-width=\"2px\" d=\"M252,97.0 252,81.16666666666667 332.0,81.16666666666667 332.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-2\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">compound</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M252,99.0 L248,91.0 256,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-3\" stroke-width=\"2px\" d=\"M347,97.0 347,81.16666666666667 427.0,81.16666666666667 427.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-3\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">nsubj</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M347,99.0 L343,91.0 351,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-4\" stroke-width=\"2px\" d=\"M537,97.0 537,81.16666666666667 617.0,81.16666666666667 617.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-4\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">det</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M537,99.0 L533,91.0 541,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-5\" stroke-width=\"2px\" d=\"M442,97.0 442,65.33333333333333 620.0,65.33333333333333 620.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-5\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">attr</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M620.0,99.0 L624.0,91.0 616.0,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-6\" stroke-width=\"2px\" d=\"M632,97.0 632,81.16666666666667 712.0,81.16666666666667 712.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-6\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">acl</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M712.0,99.0 L716.0,91.0 708.0,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-7\" stroke-width=\"2px\" d=\"M727,97.0 727,81.16666666666667 807.0,81.16666666666667 807.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-7\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">agent</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M807.0,99.0 L811.0,91.0 803.0,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-8\" stroke-width=\"2px\" d=\"M917,97.0 917,81.16666666666667 997.0,81.16666666666667 997.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-8\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">nmod</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M917,99.0 L913,91.0 921,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-9\" stroke-width=\"2px\" d=\"M1012,97.0 1012,81.16666666666667 1092.0,81.16666666666667 1092.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-9\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">compound</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M1012,99.0 L1008,91.0 1016,91.0\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-7b22af95ff9544619412e16818bcf150-0-10\" stroke-width=\"2px\" d=\"M822,97.0 822,65.33333333333333 1095.0,65.33333333333333 1095.0,97.0\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-7b22af95ff9544619412e16818bcf150-0-10\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">pobj</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M1095.0,99.0 L1099.0,91.0 1091.0,91.0\" fill=\"currentColor\"/>\n</g>\n</svg>"
+   },
+   {
+    "sentence": "PayPal adds ~3.5% on its share of orders.",
+    "tokens": [
+     {
+      "i": 0,
+      "text": "PayPal",
+      "lemma": "PayPal",
+      "pos": "PROPN",
+      "tag": "NNP",
+      "dep": "nsubj",
+      "head": 1
+     },
+     {
+      "i": 1,
+      "text": "adds",
+      "lemma": "add",
+      "pos": "VERB",
+      "tag": "VBZ",
+      "dep": "ROOT",
+      "head": 1
+     },
+     {
+      "i": 2,
+      "text": "~3.5",
+      "lemma": "~3.5",
+      "pos": "PUNCT",
+      "tag": ":",
+      "dep": "punct",
+      "head": 1
+     },
+     {
+      "i": 3,
+      "text": "%",
+      "lemma": "%",
+      "pos": "NOUN",
+      "tag": "NN",
+      "dep": "dobj",
+      "head": 1
+     },
+     {
+      "i": 4,
+      "text": "on",
+      "lemma": "on",
+      "pos": "ADP",
+      "tag": "IN",
+      "dep": "prep",
+      "head": 1
+     },
+     {
+      "i": 5,
+      "text": "its",
+      "lemma": "its",
+      "pos": "PRON",
+      "tag": "PRP$",
+      "dep": "poss",
+      "head": 6
+     },
+     {
+      "i": 6,
+      "text": "share",
+      "lemma": "share",
+      "pos": "NOUN",
+      "tag": "NN",
+      "dep": "pobj",
+      "head": 4
+     },
+     {
+      "i": 7,
+      "text": "of",
+      "lemma": "of",
+      "pos": "ADP",
+      "tag": "IN",
+      "dep": "prep",
+      "head": 6
+     },
+     {
+      "i": 8,
+      "text": "orders",
+      "lemma": "order",
+      "pos": "NOUN",
+      "tag": "NNS",
+      "dep": "pobj",
+      "head": 7
+     },
+     {
+      "i": 9,
+      "text": ".",
+      "lemma": ".",
+      "pos": "PUNCT",
+      "tag": ".",
+      "dep": "punct",
+      "head": 1
+     },
+     {
+      "i": 10,
+      "text": "\n",
+      "lemma": "\n",
+      "pos": "SPACE",
+      "tag": "_SP",
+      "dep": "dep",
+      "head": 9
+     }
+    ],
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:lang=\"en\" id=\"a6a9d589251740a3ae64fac163743963-0\" class=\"displacy\" width=\"905\" height=\"279.5\" direction=\"ltr\" style=\"max-width: none; height: 279.5px; color: currentColor; background: transparent; font-family: inherit; direction: ltr\">\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"50\">PayPal</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"50\">PROPN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"145\">adds</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"145\">VERB</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"240\">~3.5%</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"240\">PUNCT</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"335\">on</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"335\">ADP</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"430\">its</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"430\">PRON</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"525\">share</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"525\">NOUN</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"620\">of</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"620\">ADP</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"715\">orders.</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"715\">PUNCT</tspan>\n</text>\n\n<text class=\"displacy-token\" fill=\"currentColor\" text-anchor=\"middle\" y=\"189.5\">\n    <tspan class=\"displacy-word\" fill=\"currentColor\" x=\"810\">\n</tspan>\n    <tspan class=\"displacy-tag\" dy=\"2em\" fill=\"currentColor\" x=\"810\">SPACE</tspan>\n</text>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a6a9d589251740a3ae64fac163743963-0-0\" stroke-width=\"2px\" d=\"M62,144.5 62,128.66666666666666 139.0,128.66666666666666 139.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a6a9d589251740a3ae64fac163743963-0-0\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">nsubj</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M62,146.5 L58,138.5 66,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a6a9d589251740a3ae64fac163743963-0-1\" stroke-width=\"2px\" d=\"M157,144.5 157,128.66666666666666 234.0,128.66666666666666 234.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a6a9d589251740a3ae64fac163743963-0-1\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">punct</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M234.0,146.5 L238.0,138.5 230.0,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a6a9d589251740a3ae64fac163743963-0-2\" stroke-width=\"2px\" d=\"M157,144.5 157,112.83333333333333 332.0,112.83333333333333 332.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a6a9d589251740a3ae64fac163743963-0-2\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">prep</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M332.0,146.5 L336.0,138.5 328.0,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a6a9d589251740a3ae64fac163743963-0-3\" stroke-width=\"2px\" d=\"M442,144.5 442,128.66666666666666 519.0,128.66666666666666 519.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a6a9d589251740a3ae64fac163743963-0-3\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">poss</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M442,146.5 L438,138.5 446,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a6a9d589251740a3ae64fac163743963-0-4\" stroke-width=\"2px\" d=\"M347,144.5 347,112.83333333333333 522.0,112.83333333333333 522.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a6a9d589251740a3ae64fac163743963-0-4\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">pobj</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M522.0,146.5 L526.0,138.5 518.0,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a6a9d589251740a3ae64fac163743963-0-5\" stroke-width=\"2px\" d=\"M537,144.5 537,128.66666666666666 614.0,128.66666666666666 614.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a6a9d589251740a3ae64fac163743963-0-5\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">prep</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M614.0,146.5 L618.0,138.5 610.0,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a6a9d589251740a3ae64fac163743963-0-6\" stroke-width=\"2px\" d=\"M157,144.5 157,97.0 715.0,97.0 715.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a6a9d589251740a3ae64fac163743963-0-6\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">punct</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M715.0,146.5 L719.0,138.5 711.0,138.5\" fill=\"currentColor\"/>\n</g>\n\n<g class=\"displacy-arrow\">\n    <path class=\"displacy-arc\" id=\"arrow-a6a9d589251740a3ae64fac163743963-0-7\" stroke-width=\"2px\" d=\"M727,144.5 727,128.66666666666666 804.0,128.66666666666666 804.0,144.5\" fill=\"none\" stroke=\"currentColor\"/>\n    <text dy=\"1.25em\" style=\"font-size: 0.8em; letter-spacing: 1px\">\n        <textPath xlink:href=\"#arrow-a6a9d589251740a3ae64fac163743963-0-7\" class=\"displacy-label\" startOffset=\"50%\" side=\"left\" fill=\"currentColor\" text-anchor=\"middle\">dep</textPath>\n    </text>\n    <path class=\"displacy-arrowhead\" d=\"M804.0,146.5 L808.0,138.5 800.0,138.5\" fill=\"currentColor\"/>\n</g>\n</svg>"
+   }
+  ],
+  "documents": [
+   {
+    "file": "docs/01-market.md",
+    "title": "01 — The Market",
+    "entityCounts": {
+     "GPE": 19,
+     "DATE": 13,
+     "MONEY": 10,
+     "ORG": 9,
+     "PLATFORM": 9,
+     "PERCENT": 7,
+     "REGULATION": 2
+    },
+    "topNounChunks": [
+     [
+      "china",
+      3
+     ],
+     [
+      "market",
+      2
+     ],
+     [
+      "growth",
+      2
+     ],
+     [
+      "parcel",
+      2
+     ],
+     [
+      "store",
+      2
+     ],
+     [
+      "app",
+      2
+     ],
+     [
+      "market size",
+      1
+     ],
+     [
+      "source",
+      1
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "End of "
+     },
+     {
+      "text": "US",
+      "label": "GPE"
+     },
+     {
+      "text": " "
+     },
+     {
+      "text": "de minimis",
+      "label": "REGULATION"
+     },
+     {
+      "text": ". The $"
+     },
+     {
+      "text": "800",
+      "label": "MONEY"
+     },
+     {
+      "text": " duty-free exemption for small parcels ended for "
+     },
+     {
+      "text": "China",
+      "label": "GPE"
+     },
+     {
+      "text": "/"
+     },
+     {
+      "text": "Hong Kong",
+      "label": "GPE"
+     },
+     {
+      "text": " on "
+     },
+     {
+      "text": "May 2, 2025",
+      "label": "DATE"
+     },
+     {
+      "text": " ("
+     },
+     {
+      "text": "EO",
+      "label": "ORG"
+     },
+     {
+      "text": " "
+     },
+     {
+      "text": "14256",
+      "label": "DATE"
+     },
+     {
+      "text": ") and for all countries on "
+     },
+     {
+      "text": "August 29, 2025",
+      "label": "DATE"
+     },
+     {
+      "text": " ("
+     },
+     {
+      "text": "EO",
+      "label": "ORG"
+     },
+     {
+      "text": " "
+     },
+     {
+      "text": "14324",
+      "label": "DATE"
+     },
+     {
+      "text": "). Every parcel shipped direct from "
+     },
+     {
+      "text": "China",
+      "label": "GPE"
+     },
+     {
+      "text": " to a "
+     },
+     {
+      "text": "US",
+      "label": "GPE"
+     },
+     {
+      "text": " buyer now pays duties and goes through formal-ish customs processing. "
+     },
+     {
+      "text": "De minimis",
+      "label": "REGULATION"
+     },
+     {
+      "text": " parcel volumes fell "
+     },
+     {
+      "text": "about a third",
+      "label": "CARDINAL"
+     },
+     {
+      "text": " after the "
+     },
+     {
+      "text": "China",
+      "label": "GPE"
+     },
+     {
+      "text": " change. This raised the landed cost of the classic \""
+     },
+     {
+      "text": "AliExpress",
+      "label": "PLATFORM"
+     },
+     {
+      "text": " → "
+     },
+     {
+      "text": "US",
+      "label": "GPE"
+     },
+     {
+      "text": " customer\" model."
+     }
+    ]
+   },
+   {
+    "file": "docs/02-high-demand-products.md",
+    "title": "02 — High-Demand Products",
+    "entityCounts": {
+     "ORG": 11,
+     "PLATFORM": 9,
+     "DATE": 4,
+     "REGULATION": 2,
+     "PERCENT": 2,
+     "MONEY": 2,
+     "GPE": 2
+    },
+    "topNounChunks": [
+     [
+      "return",
+      3
+     ],
+     [
+      "category",
+      2
+     ],
+     [
+      "home",
+      2
+     ],
+     [
+      "bundle",
+      2
+     ],
+     [
+      "google trends",
+      2
+     ],
+     [
+      "product",
+      2
+     ],
+     [
+      "accessory",
+      2
+     ],
+     [
+      "high demand products",
+      1
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "Visible demand — "
+     },
+     {
+      "text": "Google Trends",
+      "label": "PRODUCT"
+     },
+     {
+      "text": " rising or stable "
+     },
+     {
+      "text": "12+ months",
+      "label": "DATE"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "TikTok",
+      "label": "PLATFORM"
+     },
+     {
+      "text": "/"
+     },
+     {
+      "text": "Meta",
+      "label": "PLATFORM"
+     },
+     {
+      "text": " Ad Library shows several advertisers running it for "
+     },
+     {
+      "text": "weeks",
+      "label": "DATE"
+     },
+     {
+      "text": " (proof it converts)."
+     }
+    ]
+   },
+   {
+    "file": "docs/03-target-customers.md",
+    "title": "03 — Target Customers",
+    "entityCounts": {
+     "PLATFORM": 20,
+     "ORG": 7,
+     "DATE": 7,
+     "PERCENT": 4,
+     "GPE": 2,
+     "MONEY": 1
+    },
+    "topNounChunks": [
+     [
+      "home",
+      4
+     ],
+     [
+      "tiktok",
+      4
+     ],
+     [
+      "gen z",
+      3
+     ],
+     [
+      "product",
+      2
+     ],
+     [
+      "customer",
+      2
+     ],
+     [
+      "millennial",
+      2
+     ],
+     [
+      "facebook",
+      2
+     ],
+     [
+      "pet",
+      2
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "eMarketer: "
+     },
+     {
+      "text": "43%",
+      "label": "PERCENT"
+     },
+     {
+      "text": " of millennials bought through an in-app social shop in "
+     },
+     {
+      "text": "the past three months",
+      "label": "DATE"
+     },
+     {
+      "text": ", on par with "
+     },
+     {
+      "text": "Gen Z",
+      "label": "PERSON"
+     },
+     {
+      "text": ", and they are "
+     },
+     {
+      "text": "TikTok Shop",
+      "label": "PLATFORM"
+     },
+     {
+      "text": "'s best spenders."
+     }
+    ]
+   },
+   {
+    "file": "docs/04-competitors.md",
+    "title": "04 — Competitors",
+    "entityCounts": {
+     "PLATFORM": 26,
+     "GPE": 10,
+     "ORG": 9,
+     "DATE": 3,
+     "REGULATION": 1
+    },
+    "topNounChunks": [
+     [
+      "product",
+      3
+     ],
+     [
+      "competitor",
+      3
+     ],
+     [
+      "home",
+      2
+     ],
+     [
+      "slow shipping",
+      2
+     ],
+     [
+      "price",
+      2
+     ],
+     [
+      "bundle",
+      2
+     ],
+     [
+      "tiktok shop",
+      2
+     ],
+     [
+      "fast shipping",
+      2
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "Thousands",
+      "label": "CARDINAL"
+     },
+     {
+      "text": " of stores test the same \"winning products\" found on spy tools ("
+     },
+     {
+      "text": "Minea",
+      "label": "GPE"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "Sell The Trend",
+      "label": "ORG"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "Meta",
+      "label": "PLATFORM"
+     },
+     {
+      "text": " Ad Library), so ad creatives and offers get copied within "
+     },
+     {
+      "text": "weeks",
+      "label": "DATE"
+     },
+     {
+      "text": "."
+     }
+    ]
+   },
+   {
+    "file": "docs/05-startup-and-operating-costs.md",
+    "title": "05 — Startup and Operating Costs",
+    "entityCounts": {
+     "PLATFORM": 15,
+     "MONEY": 13,
+     "DATE": 12,
+     "PERCENT": 7,
+     "ORG": 5,
+     "GPE": 5,
+     "METRIC": 3
+    },
+    "topNounChunks": [
+     [
+      "order",
+      3
+     ],
+     [
+      "shopify plan",
+      2
+     ],
+     [
+      "basic",
+      2
+     ],
+     [
+      "item",
+      2
+     ],
+     [
+      "shipping",
+      2
+     ],
+     [
+      "week",
+      2
+     ],
+     [
+      "startup operating cost",
+      1
+     ],
+     [
+      "plan",
+      1
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "Ad platforms charge "
+     },
+     {
+      "text": "daily",
+      "label": "DATE"
+     },
+     {
+      "text": "; suppliers are paid at order time; "
+     },
+     {
+      "text": "Shopify",
+      "label": "PLATFORM"
+     },
+     {
+      "text": " payouts arrive in "
+     },
+     {
+      "text": "2–3 business days",
+      "label": "DATE"
+     },
+     {
+      "text": ", but new dropshipping stores can get payout reserves (holds) of "
+     },
+     {
+      "text": "weeks",
+      "label": "DATE"
+     },
+     {
+      "text": " to "
+     },
+     {
+      "text": "120 days",
+      "label": "DATE"
+     },
+     {
+      "text": " (see 08-risks.md). Keep "
+     },
+     {
+      "text": "2–3 months",
+      "label": "DATE"
+     },
+     {
+      "text": " of ad spend plus fixed costs in working capital."
+     }
+    ]
+   },
+   {
+    "file": "docs/06-staffing.md",
+    "title": "06 — Staffing",
+    "entityCounts": {
+     "GPE": 16,
+     "ORG": 14,
+     "MONEY": 8,
+     "PLATFORM": 7,
+     "DATE": 6,
+     "METRIC": 1,
+     "PERCENT": 1
+    },
+    "topNounChunks": [
+     [
+      "founder",
+      5
+     ],
+     [
+      "function",
+      3
+     ],
+     [
+      "stage",
+      3
+     ],
+     [
+      "ai agent",
+      3
+     ],
+     [
+      "supplier relationship",
+      2
+     ],
+     [
+      "founder ai agent",
+      2
+     ],
+     [
+      "freelance media buyer",
+      2
+     ],
+     [
+      "ugc creator",
+      2
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "Suggested agent roles that map to the functions above: Market Research, "
+     },
+     {
+      "text": "Product Hunter",
+      "label": "PERSON"
+     },
+     {
+      "text": ", Brand & Store Builder, "
+     },
+     {
+      "text": "Copywriter/Creative",
+      "label": "ORG"
+     },
+     {
+      "text": " Director, "
+     },
+     {
+      "text": "Media Buyer/Ad Analyst",
+      "label": "ORG"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "Email/Retention",
+      "label": "ORG"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "Customer Support",
+      "label": "PERSON"
+     },
+     {
+      "text": ", Operations/Supplier Manager, "
+     },
+     {
+      "text": "Finance/Unit Economics",
+      "label": "ORG"
+     },
+     {
+      "text": ", and "
+     },
+     {
+      "text": "Compliance/Risk",
+      "label": "ORG"
+     },
+     {
+      "text": "."
+     }
+    ]
+   },
+   {
+    "file": "docs/07-marketing.md",
+    "title": "07 — Marketing",
+    "entityCounts": {
+     "PLATFORM": 14,
+     "METRIC": 13,
+     "ORG": 12,
+     "PERCENT": 11,
+     "DATE": 9,
+     "REGULATION": 9,
+     "MONEY": 4,
+     "GPE": 3
+    },
+    "topNounChunks": [
+     [
+      "launch",
+      4
+     ],
+     [
+      "day",
+      3
+     ],
+     [
+      "marketing",
+      2
+     ],
+     [
+      "cpm",
+      2
+     ],
+     [
+      "creative testing",
+      2
+     ],
+     [
+      "influencer",
+      2
+     ],
+     [
+      "sms",
+      2
+     ],
+     [
+      "retention",
+      2
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "Store "
+     },
+     {
+      "text": "conversion rate",
+      "label": "METRIC"
+     },
+     {
+      "text": ": median ~1.4% ("
+     },
+     {
+      "text": "Littledata",
+      "label": "ORG"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "2,800",
+      "label": "CARDINAL"
+     },
+     {
+      "text": " stores); top "
+     },
+     {
+      "text": "20%",
+      "label": "PERCENT"
+     },
+     {
+      "text": " ≥ "
+     },
+     {
+      "text": "3.2%",
+      "label": "PERCENT"
+     },
+     {
+      "text": ", top "
+     },
+     {
+      "text": "10%",
+      "label": "PERCENT"
+     },
+     {
+      "text": " ≥ "
+     },
+     {
+      "text": "4.7%",
+      "label": "PERCENT"
+     },
+     {
+      "text": ". A "
+     },
+     {
+      "text": "2026",
+      "label": "DATE"
+     },
+     {
+      "text": " Shogun study: mean "
+     },
+     {
+      "text": "2.6%",
+      "label": "PERCENT"
+     },
+     {
+      "text": ", median "
+     },
+     {
+      "text": "1.7%",
+      "label": "PERCENT"
+     },
+     {
+      "text": "."
+     }
+    ]
+   },
+   {
+    "file": "docs/08-risks.md",
+    "title": "08 — Biggest Risks",
+    "entityCounts": {
+     "REGULATION": 16,
+     "DATE": 14,
+     "PERCENT": 11,
+     "ORG": 11,
+     "PLATFORM": 10,
+     "METRIC": 9,
+     "GPE": 5,
+     "MONEY": 1
+    },
+    "topNounChunks": [
+     [
+      "store",
+      3
+     ],
+     [
+      "day",
+      3
+     ],
+     [
+      "violation",
+      3
+     ],
+     [
+      "month",
+      2
+     ],
+     [
+      "risk",
+      2
+     ],
+     [
+      "item",
+      2
+     ],
+     [
+      "chargeback rate",
+      2
+     ],
+     [
+      "brand",
+      2
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "Estimates vary by definition: "
+     },
+     {
+      "text": "80–90%",
+      "label": "PERCENT"
+     },
+     {
+      "text": " of dropshipping stores fail within "
+     },
+     {
+      "text": "the first year",
+      "label": "DATE"
+     },
+     {
+      "text": " (several industry roundups; "
+     },
+     {
+      "text": "Spocket",
+      "label": "PLATFORM"
+     },
+     {
+      "text": " data cited at ~90% within "
+     },
+     {
+      "text": "four months",
+      "label": "DATE"
+     },
+     {
+      "text": "), and "
+     },
+     {
+      "text": "TrueProfit",
+      "label": "ORG"
+     },
+     {
+      "text": " estimates "
+     },
+     {
+      "text": "only 1–5%",
+      "label": "PERCENT"
+     },
+     {
+      "text": " consistently earn net profit after all costs. Many \"failures\" are stores that were never seriously run, but the base rate is still harsh. The risks below are the usual causes."
+     }
+    ]
+   },
+   {
+    "file": "docs/09-nlp-text-analysis.md",
+    "title": "09 — NLP for the Store: NLTK and spaCy",
+    "entityCounts": {
+     "ORG": 21,
+     "GPE": 3,
+     "PLATFORM": 3,
+     "REGULATION": 3,
+     "METRIC": 3,
+     "DATE": 1
+    },
+    "topNounChunks": [
+     [
+      "review",
+      5
+     ],
+     [
+      "nltk",
+      4
+     ],
+     [
+      "nlp",
+      3
+     ],
+     [
+      "library",
+      3
+     ],
+     [
+      "platform",
+      3
+     ],
+     [
+      "text",
+      2
+     ],
+     [
+      "project",
+      2
+     ],
+     [
+      "train pipeline",
+      2
+     ]
+    ],
+    "highlight": [
+     {
+      "text": "An entity_ruler added before ner adds custom labels: "
+     },
+     {
+      "text": "PLATFORM (",
+      "label": "ORG"
+     },
+     {
+      "text": "Shopify",
+      "label": "PLATFORM"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "TikTok Shop",
+      "label": "PLATFORM"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "Temu",
+      "label": "PLATFORM"
+     },
+     {
+      "text": "…), REGULATION ("
+     },
+     {
+      "text": "FTC",
+      "label": "REGULATION"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "TCPA",
+      "label": "REGULATION"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "de minimis",
+      "label": "REGULATION"
+     },
+     {
+      "text": "…) and METRIC ("
+     },
+     {
+      "text": "ROAS",
+      "label": "METRIC"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "CPA",
+      "label": "METRIC"
+     },
+     {
+      "text": ", "
+     },
+     {
+      "text": "AOV",
+      "label": "METRIC"
+     },
+     {
+      "text": "…)."
+     }
+    ]
+   }
+  ]
+ }
+}

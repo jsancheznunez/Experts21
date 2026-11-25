@@ -12,6 +12,10 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  # Python for the build-time NLTK + spaCy analysis (web/scripts/build-nlp.sh).
+  PYTHON_VERSION = "3.12"
+  # Fail the deploy if the NLP analysis fails; Netlify keeps the previous deploy live.
+  NLP_STRICT = "1"
 
 [functions]
   node_bundler = "esbuild"

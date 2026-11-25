@@ -4,11 +4,14 @@
   "version": "1.0.0",
   "description": "Chat with the Experts21 Shopify dropshipping advisory team",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
+    "nlp": "bash scripts/build-nlp.sh",
     "generate": "node scripts/build-agents.mjs",
     "dev": "npm run generate && vite",
-    "build": "npm run generate && vite build",
+    "build": "npm run nlp && npm run generate && vite build",
     "preview": "vite preview",
     "test:local": "node scripts/test-local.mjs"
   },

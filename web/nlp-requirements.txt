@@ -1,0 +1,6 @@
+# Python packages for the build-time NLP analysis (scripts/nlp_analysis.py).
+# Installed into a virtual environment by scripts/build-nlp.sh during the Netlify build.
+# Not named requirements.txt on purpose: Netlify would otherwise also install it into its own Python.
+nltk==3.10.4
+spacy==3.8.18
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

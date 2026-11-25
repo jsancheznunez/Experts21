@@ -38,6 +38,8 @@ Full roster: `docs/expert-roster.md`. Agent files: `.claude/agents/`.
 | retention-marketer | Email/SMS flows, list growth, repeat purchases |
 | search-shopping-marketer | Google Shopping/PMax, Merchant Center, SEO |
 | social-commerce-manager | TikTok Shop, influencers, affiliates, creator programs |
+| nltk-expert | Text analytics with NLTK: word frequency, VADER sentiment, collocations on reviews, tickets, comments; the NLP Lab's NLTK part |
+| spacy-expert | NLP with spaCy: entities, custom EntityRuler, noun chunks, lemmas, dependency parses on competitor pages, listings, reviews; the NLP Lab's spaCy part |
 | team-architect | Creating or improving agents and skills (not business questions) |
 
 ## Standard panels
@@ -52,6 +54,7 @@ Full roster: `docs/expert-roster.md`. Agent files: `.claude/agents/`.
 | "Supplier problems / slow shipping" | sourcing-supplier-manager, fulfillment-logistics-specialist | customer-experience-lead, ecommerce-compliance-counsel (Mail Order Rule) |
 | "Set up the business legally" | corporate-ip-counsel, bookkeeping-tax-specialist, ecommerce-compliance-counsel | financial-analyst |
 | "Who do we hire?" | staffing-talent-advisor, financial-analyst | the function's expert(s) |
+| "What are customers / competitors saying?" (reviews, tickets, competitor pages) | nltk-expert, spacy-expert, customer-insights-researcher | competitive-intelligence-analyst, ecommerce-compliance-counsel (before quoting customer phrases) |
 | "Write a product page / ad" | conversion-copywriter, creative-director, customer-insights-researcher | ecommerce-compliance-counsel, cro-ux-specialist |
 
 ## Routing rules

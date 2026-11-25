@@ -129,5 +129,18 @@ writeFileSync(join(WEB, "server", "generated", "agents-full.mjs"), "export defau
   generatedAt: new Date().toISOString(), agents: fullAgents, skills, docs,
 }) + ";\n");
 
+// ---- research links for the Resources page: every external link cited in docs/*.md ----
+const links = new Map();
+for (const name of readdirSync(join(REPO, "docs")).sort().filter((n) => n.endsWith(".md"))) {
+  const md = readFileSync(join(REPO, "docs", name), "utf8");
+  for (const m of md.matchAll(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g)) {
+    const [, text, url] = m;
+    const entry = links.get(url) ?? { url, text: text.replace(/[*`]/g, ""), docs: [] };
+    if (!entry.docs.includes(`docs/${name}`)) entry.docs.push(`docs/${name}`);
+    links.set(url, entry);
+  }
+}
+writeFileSync(join(WEB, "src", "generated", "research-links.json"), JSON.stringify([...links.values()], null, 2));
+
 const kb = Object.values(fullAgents).reduce((n, a) => n + a.knowledge.length, 0);
-console.log(`build-agents: ${publicAgents.length} agents, ${Object.keys(skills).length} skills, ${Object.keys(docs).length} research docs, ${kb} knowledge files`);
+console.log(`build-agents: ${publicAgents.length} agents, ${Object.keys(skills).length} skills, ${Object.keys(docs).length} research docs, ${kb} knowledge files, ${links.size} research links`);

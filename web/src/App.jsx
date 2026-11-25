@@ -244,10 +244,9 @@ export default function App() {
 
   return (
     <div className="app">
-      <header className="topbar">
-        <button className="menu-button" onClick={() => setSidebarOpen((o) => !o)} aria-expanded={sidebarOpen}>☰ Experts</button>
-        <h1>Experts21 <span className="muted">· Shopify dropshipping advisory team</span></h1>
-      </header>
+      <div className="topbar mobile-only">
+        <button className="menu-button" onClick={() => setSidebarOpen((o) => !o)} aria-expanded={sidebarOpen}>☰ Choose an expert</button>
+      </div>
       <Sidebar selected={selected} onSelect={selectAgent} open={sidebarOpen} />
       <main className="chat">
         <div className="chat-header">

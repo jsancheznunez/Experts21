@@ -1,27 +1,27 @@
 # Experts21 — Shopify Dropshipping Advisory Team
 
-This project is a team of **28 Claude Code agents** that advise a consultant on opening and running a Shopify store that sells dropshipped products. The team is built on research in `docs/` (dated November 2026).
+This project is a team of **30 Claude Code agents** that advise a consultant on opening and running a Shopify store that sells dropshipped products. The team is built on research in `docs/` (dated November 2026).
 
 ## Instructions for Claude in this project
 
 - **Business questions** about the store (products, market, costs, marketing, operations, legal, finance, risk): delegate to the **`orchestrator`** agent. It picks the experts, runs them and returns one combined answer. For a narrow question that clearly belongs to one expert, you may call that expert directly.
 - **Requests to add, change or fix agents or skills:** delegate to **`team-architect`**.
 - Treat `docs/` as the shared baseline. Volatile facts (prices, tariffs, ad costs, laws) must be checked before they're relied on.
-- Save generated deliverables under `deliverables/<area>/` (for example `deliverables/answers/`, `deliverables/finance/`). Don't edit the research files `docs/01`–`docs/08` unless asked.
+- Save generated deliverables under `deliverables/<area>/` (for example `deliverables/answers/`, `deliverables/finance/`). Don't edit the research files `docs/01`–`docs/09` unless asked.
 
 ## Layout
 
 ```
 CLAUDE.md                     this file
-docs/                         research (README index, 01–08 topic files), expert-roster.md, agent-brains.md, how-to guide
+docs/                         research (README index, 01–09 topic files), expert-roster.md, agent-brains.md, how-to guide
 knowledge/<agent-name>/       each agent's own documents, read before every answer
-.claude/agents/               28 subagents (one .md file each)
-.claude/skills/<name>/SKILL.md  40 skills, preloaded into agents via the `skills:` field
+.claude/agents/               30 subagents (one .md file each)
+.claude/skills/<name>/SKILL.md  42 skills, preloaded into agents via the `skills:` field
 .claude/scripts/validate_team.py  checks agent and skill wiring
 deliverables/                 outputs the team saves (created on demand)
 exports/                      agents packaged as uploadable Claude skills (.claude/scripts/export_agent_skill.py)
 sdk/                          Node.js Claude Agent SDK script that asks Zoe a question (sdk/README.md)
-web/                          React chat app for the team, deployed on Netlify (web/README.md; netlify.toml at the root)
+web/                          React app on Netlify: chat with the experts, NLP Lab (NLTK + spaCy, run at build time), Resources page (web/README.md; netlify.toml at the root)
 ```
 
 ## The team
@@ -30,7 +30,7 @@ web/                          React chat app for the team, deployed on Netlify (
 |---|---|
 | **Coordination** | `orchestrator` (routes any question to the right experts and merges their work into one answer) · `team-architect` (meta agent: creates and improves agents and skills) |
 | **Strategy & Business** | `engagement-lead` · `market-trend-analyst` · `product-research-specialist` · `competitive-intelligence-analyst` · `customer-insights-researcher` · `brand-strategist` |
-| **Technical** | `shopify-store-architect` · `cro-ux-specialist` · `analytics-tracking-engineer` · `automation-integrations-engineer` |
+| **Technical** | `shopify-store-architect` · `cro-ux-specialist` · `analytics-tracking-engineer` · `automation-integrations-engineer` · `nltk-expert` · `spacy-expert` |
 | **Operations** | `sourcing-supplier-manager` · `fulfillment-logistics-specialist` · `customer-experience-lead` · `payments-fraud-risk-specialist` · `staffing-talent-advisor` |
 | **Finance** | `financial-analyst` · `bookkeeping-tax-specialist` |
 | **Legal & Risk** | `ecommerce-compliance-counsel` · `corporate-ip-counsel` · `risk-manager` |
@@ -48,7 +48,7 @@ Each role's job description, skills and source docs are in [`docs/expert-roster.
 5. **Synthesis:** one answer: recommendation, details, disagreements, risks, next steps, items that need human approval, the panel and sources.
 
 ### Skills
-40 skills hold the working knowledge: methods, checklists, formulas, thresholds and output templates. A skill can be shared by several agents. Each agent **preloads** the full text of its skills at startup through the `skills:` list in its frontmatter. The most shared are `web-research` (11 agents), `ftc-consumer-protection` (8), `unit-economics`, `customer-personas` and `compliant-copywriting` (6 each). Skills can also be used directly in the main session as slash commands, for example `/unit-economics` or `/product-scoring`.
+42 skills hold the working knowledge: methods, checklists, formulas, thresholds and output templates. A skill can be shared by several agents. Each agent **preloads** the full text of its skills at startup through the `skills:` list in its frontmatter. The most shared are `web-research` (11 agents), `ftc-consumer-protection` (8), `unit-economics`, `customer-personas` and `compliant-copywriting` (6 each). Skills can also be used directly in the main session as slash commands, for example `/unit-economics` or `/product-scoring`.
 
 ## How to use the team
 
@@ -85,7 +85,7 @@ Authoring conventions:
 - Every expert uses the same prompt sections: Read first · Responsibilities · How you work · Deliverable · Hand-offs · Guardrails.
 - Skills live in `.claude/skills/<name>/SKILL.md`, with `metadata.id` set to `S##`. Keep them concise (they're preloaded on every run). Never set `disable-model-invocation: true` on a skill that agents preload.
 - Agent tool access is minimal. Research agents get `Read, Grep, Glob, WebSearch, WebFetch`. Agents that save deliverables add `Write, Edit`. Only agents that need calculations or CLIs add `Bash`. Only `orchestrator` has `Agent`.
-- Every agent sets `model:`: **opus** (7) for deep strategy, legal and finance judgment plus the orchestrator and team-architect; **sonnet** (18) for most specialist work; **haiku** (3) for fast template and lookup work. Reasons are in [`docs/agent-brains.md`](docs/agent-brains.md).
+- Every agent sets `model:`: **opus** (7) for deep strategy, legal and finance judgment plus the orchestrator and team-architect; **sonnet** (20) for most specialist work; **haiku** (3) for fast template and lookup work. Reasons are in [`docs/agent-brains.md`](docs/agent-brains.md).
 - Every agent has a first name, voice and working style (**Who you are** section; tone only) and reads its folder in `knowledge/<agent-name>/` before answering.
 
 ## Team guardrails (apply to every agent)

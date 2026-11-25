@@ -5,8 +5,21 @@ A React chat app for talking to the advisory team:
 - **Sidebar:** every agent with first name, title, model (opus / sonnet / haiku) and voice, grouped by domain.
 - **Chat window:** pick an expert and ask; the answer streams in. Each expert keeps its own conversation (saved in your browser).
 - **Ask the whole team:** Maya (the orchestrator) picks a panel, the experts answer in parallel, reviewers check their work, and Maya writes one combined answer. You can expand each expert's individual report.
+- **NLP Lab** (`#/nlp`): the team's research in `docs/` analyzed with two clearly labeled parts. **Part 1 uses NLTK** (tokenizing, stopwords, word frequency, VADER sentiment, collocations). **Part 2 uses spaCy** (named entities with a custom EntityRuler, noun chunks, lemmas, dependency parsing with displaCy).
+- **Resources** (`#/resources`): every link the project relies on: the GitHub repo, the guides, official NLTK, spaCy, Claude, Netlify and front-end docs, plus every research source cited in `docs/` (collected automatically at build time).
 
 Agents, skills, knowledge folders and research docs are read from this repository **at build time** (`scripts/build-agents.mjs`). The Claude API is only called from **Netlify Functions**, so your API key never reaches the browser.
+
+## How NLTK and spaCy run
+
+Netlify Functions run JavaScript, not Python, so the NLP runs **during the Netlify build**:
+
+1. `npm run build` first runs `scripts/build-nlp.sh`.
+2. It creates a Python virtual environment (`.venv-nlp`), installs `nlp-requirements.txt` (NLTK 3.10.4, spaCy 3.8.18 and the `en_core_web_sm` 3.8.0 model), and runs `scripts/nlp_analysis.py`.
+3. The script downloads the NLTK data it needs (`punkt_tab`, `stopwords`, `vader_lexicon`), analyzes `docs/0*.md`, and writes `src/nlp/nlp-results.json`.
+4. Vite bundles that JSON into the NLP Lab page, which shows when and with which versions it was computed.
+
+`netlify.toml` sets `PYTHON_VERSION = "3.12"` and `NLP_STRICT = "1"`: if the analysis fails, the deploy fails and Netlify keeps the previous version live. The last results are also committed, so `npm run dev` works without Python. Running the analysis locally behind an HTTP proxy needs `NLTK_ALLOW_PROXIED_URLOPEN=1` (NLTK 3.10 refuses proxied downloads by default); Netlify's build servers don't need it.
 
 ## How it works
 
@@ -20,6 +33,8 @@ Browser (React, Vite)                        Netlify Functions (server)         
 
 | File | Purpose |
 |---|---|
+| `scripts/build-nlp.sh`, `scripts/nlp_analysis.py`, `nlp-requirements.txt` | Build-time NLTK + spaCy analysis → `src/nlp/nlp-results.json` |
+| `src/NlpLab.jsx`, `src/Resources.jsx`, `src/resources.js`, `src/Shell.jsx` | NLP Lab page, Resources page and links, top navigation (hash routes: `#/`, `#/nlp`, `#/resources`) |
 | `scripts/build-agents.mjs` | Reads `../.claude/agents`, `../.claude/skills`, `../knowledge`, `../docs`. Writes `src/generated/agents.json` (public: names, personalities, models) and `server/generated/agents-full.mjs` (server-only: prompts, skills, docs, knowledge) |
 | `server/claude.mjs` | Builds each agent's system prompt, maps models (opus → `claude-opus-5-5`, sonnet → `claude-sonnet-5-5`, haiku → `claude-haiku-5-5`), prompt caching, refusal fallbacks, optional password check |
 | `server/team.mjs` | The whole-team flow |
@@ -108,6 +123,7 @@ node scripts/test-local.mjs team "Keep the panel small: is a $39.95 dog harness 
 | "The answer was cut off" | The 60-second limit hit. Ask for a shorter answer, or use Ask the whole team |
 | "The team run never started" | Open **Logs → Functions → team-run** in Netlify. Check that background functions are available on your plan and that `APP_PASSWORD` matches |
 | Password prompt keeps coming back | The password doesn't match `APP_PASSWORD`; clear it with your browser's site data |
+| Deploy fails in "build-nlp" | Open the deploy log. Usually a temporary download error for the spaCy model (GitHub) or NLTK data; retry the deploy. The previous deploy stays live meanwhile |
 | An agent or knowledge change isn't showing | Push to `main` (or trigger a deploy); data is read at build time |
 | Can't find **Trigger deploy** to redeploy | Open **Deploys**, click the latest deploy and use **Retry** / **Options → Retry deploy**, or push any change to `main` (Netlify rebuilds automatically when the project is linked to the GitHub repo) |
 

@@ -33,4 +33,6 @@ Never store credentials or customer personal data here.
 | [`retention-marketer/`](retention-marketer/README.md) | Leila | Flow maps and email/SMS copy; klaviyo/omnisend performance exports |
 | [`search-shopping-marketer/`](search-shopping-marketer/README.md) | Arjun | Merchant Center diagnostics and feed exports; search console reports |
 | [`social-commerce-manager/`](social-commerce-manager/README.md) | Camila | Creator shortlist and outreach log; commission structures and affiliate terms |
+| [`nltk-expert/`](nltk-expert/README.md) | Nils | Anonymized review, ticket or comment exports to analyze (CSV); stopword additions and domain word lists |
+| [`spacy-expert/`](spacy-expert/README.md) | Sofia | EntityRuler pattern lists (platforms, suppliers, products, regulations); anonymized competitor page or supplier listing text to analyze |
 | [`team-architect/`](team-architect/README.md) | Ada | Feedback about agents' answers (good and bad); requests for new experts or skills |

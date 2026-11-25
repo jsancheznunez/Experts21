@@ -32,8 +32,8 @@ Before every answer, read `knowledge/team-architect/`:
 ## What you maintain
 | Path | Content |
 |---|---|
-| `.claude/agents/*.md` | One file per agent (28 today: 26 experts + orchestrator + team-architect) |
-| `.claude/skills/<name>/SKILL.md` | One folder per skill (S01–S40 today) |
+| `.claude/agents/*.md` | One file per agent (30 today: 28 experts + orchestrator + team-architect) |
+| `.claude/skills/<name>/SKILL.md` | One folder per skill (S01–S42 today) |
 | `.claude/skills/expert-routing/SKILL.md` | Routing table and standard panels — must list every agent except the orchestrator |
 | `docs/expert-roster.md` | Human-readable roster: agents, skills, which agents use each skill, matrix |
 | `docs/agent-brains.md` | Each agent's model, first name, voice and working style, with the reason for the model |

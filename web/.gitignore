@@ -3,3 +3,6 @@ dist/
 src/generated/
 server/generated/
 .netlify/
+.venv-nlp/
+.nltk_data/
+__pycache__/

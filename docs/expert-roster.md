@@ -2,14 +2,14 @@
 
 The experts a consultant needs around them to advise on launching and running a Shopify dropshipping store. Each role is a Claude Code subagent; each skill is a reusable capability that one or more agents share. Roles and skills are drawn from the research in this folder (see [README](README.md)).
 
-**28 agents · 40 skills** · IDs (`A01`, `S01`) are stable references. This roster is built as Claude Code project subagents in [`.claude/agents/`](../.claude/agents/) and skills in [`.claude/skills/`](../.claude/skills/); see [`CLAUDE.md`](../CLAUDE.md) for how to use the team. Each agent preloads the skills listed for it.
+**30 agents · 42 skills** · IDs (`A01`, `S01`) are stable references. This roster is built as Claude Code project subagents in [`.claude/agents/`](../.claude/agents/) and skills in [`.claude/skills/`](../.claude/skills/); see [`CLAUDE.md`](../CLAUDE.md) for how to use the team. Each agent preloads the skills listed for it.
 
 ## Summary by domain
 
 | Domain | Agents |
 |---|---|
 | Strategy & Business | A01 Engagement Lead (Chief Strategist), A02 Market & Trend Analyst, A03 Product Research Specialist, A04 Competitive Intelligence Analyst, A05 Customer Insights Researcher, A06 Brand Strategist |
-| Technical | A07 Shopify Store Architect, A08 CRO & UX Specialist, A09 Analytics & Tracking Engineer, A10 Automation & Integrations Engineer |
+| Technical | A07 Shopify Store Architect, A08 CRO & UX Specialist, A09 Analytics & Tracking Engineer, A10 Automation & Integrations Engineer, A29 NLTK Text Analytics Expert, A30 spaCy NLP Engineer |
 | Operations | A11 Sourcing & Supplier Manager, A12 Fulfillment, Logistics & Customs Specialist, A13 Customer Experience Lead, A14 Payments & Fraud Risk Specialist, A15 Staffing & Talent Advisor |
 | Finance | A16 Financial Analyst (Unit Economics & FP&A), A17 Bookkeeping & Tax Specialist |
 | Legal & Risk | A18 E-commerce Compliance Counsel, A19 Corporate & IP Counsel, A20 Risk Manager |
@@ -25,8 +25,8 @@ The experts a consultant needs around them to advise on launching and running a 
 | A01 | **Engagement Lead (Chief Strategist)** | [`engagement-lead`](../.claude/agents/engagement-lead.md) | Orchestrates the expert team, turns the consultant's questions into tasks, reconciles conflicting advice, and delivers a single recommendation with trade-offs. | S01 `web-research`, S04 `product-scoring`, S06 `unit-economics`, S07 `financial-forecasting`, S18 `kpi-dashboards`, S35 `hiring-sops`, S36 `risk-monitoring`, S37 `decision-synthesis`, S38 `expert-routing` | all |
 | A02 | **Market & Trend Analyst** | [`market-trend-analyst`](../.claude/agents/market-trend-analyst.md) | Sizes the market, tracks macro shifts (tariffs, social commerce, marketplace pricing), and says where demand is growing or shrinking. | S01 `web-research`, S02 `demand-validation` | [01](01-market.md), [04](04-competitors.md) |
 | A03 | **Product Research Specialist** | [`product-research-specialist`](../.claude/agents/product-research-specialist.md) | Finds and validates candidate products, scores them against the selection criteria, and recommends hero products and accessories. | S01 `web-research`, S02 `demand-validation`, S03 `competitor-teardown`, S04 `product-scoring`, S05 `pricing-margin-modeling`, S20 `supplier-vetting`, S29 `product-safety-compliance` | [02](02-high-demand-products.md), [04](04-competitors.md), [05](05-startup-and-operating-costs.md) |
-| A04 | **Competitive Intelligence Analyst** | [`competitive-intelligence-analyst`](../.claude/agents/competitive-intelligence-analyst.md) | Tears down competing stores, marketplaces and ads to find price ceilings, copied offers, and gaps we can own. | S01 `web-research`, S02 `demand-validation`, S03 `competitor-teardown`, S05 `pricing-margin-modeling` | [04](04-competitors.md), [07](07-marketing.md) |
-| A05 | **Customer Insights Researcher** | [`customer-insights-researcher`](../.claude/agents/customer-insights-researcher.md) | Builds and maintains customer personas and journeys, and turns reviews and support tickets into insight on objections and motivations. | S01 `web-research`, S08 `customer-personas`, S24 `customer-support-ops` | [03](03-target-customers.md) |
+| A04 | **Competitive Intelligence Analyst** | [`competitive-intelligence-analyst`](../.claude/agents/competitive-intelligence-analyst.md) | Tears down competing stores, marketplaces and ads to find price ceilings, copied offers, and gaps we can own. | S01 `web-research`, S02 `demand-validation`, S03 `competitor-teardown`, S05 `pricing-margin-modeling`, S42 `spacy-nlp-pipeline` | [04](04-competitors.md), [07](07-marketing.md) |
+| A05 | **Customer Insights Researcher** | [`customer-insights-researcher`](../.claude/agents/customer-insights-researcher.md) | Builds and maintains customer personas and journeys, and turns reviews and support tickets into insight on objections and motivations. | S01 `web-research`, S08 `customer-personas`, S24 `customer-support-ops`, S41 `nltk-text-analysis`, S42 `spacy-nlp-pipeline` | [03](03-target-customers.md) |
 | A06 | **Brand Strategist** | [`brand-strategist`](../.claude/agents/brand-strategist.md) | Defines the niche positioning, brand name, voice and visual identity that let the store compete on something other than price. | S03 `competitor-teardown`, S08 `customer-personas`, S09 `brand-positioning`, S10 `compliant-copywriting` | [03](03-target-customers.md), [04](04-competitors.md) |
 
 ### Technical
@@ -37,6 +37,8 @@ The experts a consultant needs around them to advise on launching and running a 
 | A08 | **CRO & UX Specialist** | [`cro-ux-specialist`](../.claude/agents/cro-ux-specialist.md) | Raises conversion rate and order value through page design, offers, bundles and structured A/B tests on mobile-first pages. | S05 `pricing-margin-modeling`, S06 `unit-economics`, S08 `customer-personas`, S13 `shopify-theme-development`, S15 `cro-ab-testing`, S16 `accessibility-performance` | [05](05-startup-and-operating-costs.md), [07](07-marketing.md) |
 | A09 | **Analytics & Tracking Engineer** | [`analytics-tracking-engineer`](../.claude/agents/analytics-tracking-engineer.md) | Implements pixels, Conversions API, GA4 and attribution, and builds the KPI and profit dashboards every other agent relies on. | S14 `app-stack-evaluation`, S17 `tracking-attribution`, S18 `kpi-dashboards`, S28 `privacy-consent` | [05](05-startup-and-operating-costs.md), [07](07-marketing.md), [08](08-risks.md) |
 | A10 | **Automation & Integrations Engineer** | [`automation-integrations-engineer`](../.claude/agents/automation-integrations-engineer.md) | Connects suppliers, fulfillment apps, TikTok Shop, helpdesk and email tools, and automates order and inventory workflows. | S12 `shopify-admin`, S14 `app-stack-evaluation`, S19 `workflow-automation`, S21 `order-inventory-ops`, S24 `customer-support-ops` | [04](04-competitors.md), [06](06-staffing.md) |
+| A29 | **NLTK Text Analytics Expert** | [`nltk-expert`](../.claude/agents/nltk-expert.md) | Turns reviews, tickets, comments and research into word frequencies, VADER sentiment and recurring phrases with NLTK; maintains the NLP Lab's NLTK part. | S01 `web-research`, S08 `customer-personas`, S41 `nltk-text-analysis` | [09](09-nlp-text-analysis.md), [03](03-target-customers.md) |
+| A30 | **spaCy NLP Engineer** | [`spacy-expert`](../.claude/agents/spacy-expert.md) | Extracts entities, product features and sentence structure with spaCy pipelines and a custom EntityRuler; maintains the NLP Lab's spaCy part. | S01 `web-research`, S03 `competitor-teardown`, S42 `spacy-nlp-pipeline` | [09](09-nlp-text-analysis.md), [04](04-competitors.md) |
 
 ### Operations
 
@@ -87,14 +89,14 @@ Skills ordered by ID. **Shared by** counts how many agents use each skill, which
 
 | ID | Skill | Skill folder | What it covers | Used by | Shared by |
 |---|---|---|---|---|---|
-| S01 | **Web research & source evaluation** | [`web-research`](../.claude/skills/web-research/SKILL.md) | Search the web, weigh vendor bias, cite sources, and report ranges instead of single numbers. | A01 Engagement Lead (Chief Strategist), A02 Market & Trend Analyst, A03 Product Research Specialist, A04 Competitive Intelligence Analyst, A05 Customer Insights Researcher, A11 Sourcing & Supplier Manager, A12 Fulfillment, Logistics & Customs Specialist, A18 E-commerce Compliance Counsel, A19 Corporate & IP Counsel, A27 Orchestrator, A28 Team Architect (meta agent) | 11 |
+| S01 | **Web research & source evaluation** | [`web-research`](../.claude/skills/web-research/SKILL.md) | Search the web, weigh vendor bias, cite sources, and report ranges instead of single numbers. | A01 Engagement Lead (Chief Strategist), A02 Market & Trend Analyst, A03 Product Research Specialist, A04 Competitive Intelligence Analyst, A05 Customer Insights Researcher, A11 Sourcing & Supplier Manager, A12 Fulfillment, Logistics & Customs Specialist, A18 E-commerce Compliance Counsel, A19 Corporate & IP Counsel, A27 Orchestrator, A28 Team Architect (meta agent), A29 NLTK Text Analytics Expert, A30 spaCy NLP Engineer | 13 |
 | S02 | **Trend & demand validation** | [`demand-validation`](../.claude/skills/demand-validation/SKILL.md) | Use Google Trends, TikTok Creative Center, Amazon/TikTok best-seller lists and research tools to confirm sustained demand. | A02 Market & Trend Analyst, A03 Product Research Specialist, A04 Competitive Intelligence Analyst, A21 Paid Social Media Buyer, A26 Social Commerce & Influencer Manager | 5 |
-| S03 | **Ad library & competitor teardown** | [`competitor-teardown`](../.claude/skills/competitor-teardown/SKILL.md) | Mine the Meta Ad Library and TikTok top ads, and audit rival stores for pricing, offers, hooks and policies. | A03 Product Research Specialist, A04 Competitive Intelligence Analyst, A06 Brand Strategist, A21 Paid Social Media Buyer, A22 Creative Director & UGC Producer | 5 |
+| S03 | **Ad library & competitor teardown** | [`competitor-teardown`](../.claude/skills/competitor-teardown/SKILL.md) | Mine the Meta Ad Library and TikTok top ads, and audit rival stores for pricing, offers, hooks and policies. | A03 Product Research Specialist, A04 Competitive Intelligence Analyst, A06 Brand Strategist, A21 Paid Social Media Buyer, A22 Creative Director & UGC Producer, A30 spaCy NLP Engineer | 6 |
 | S04 | **Product scoring** | [`product-scoring`](../.claude/skills/product-scoring/SKILL.md) | Apply the 9-criteria product scorecard (demand, wow factor, price band, landed cost, price-check risk, warehouse, returns, repeat, regulation). | A01 Engagement Lead (Chief Strategist), A03 Product Research Specialist, A11 Sourcing & Supplier Manager, A16 Financial Analyst (Unit Economics & FP&A) | 4 |
 | S05 | **Pricing & margin modeling** | [`pricing-margin-modeling`](../.claude/skills/pricing-margin-modeling/SKILL.md) | Set retail prices, bundles and quantity breaks from landed cost, competitor price checks and target margin. | A03 Product Research Specialist, A04 Competitive Intelligence Analyst, A08 CRO & UX Specialist, A16 Financial Analyst (Unit Economics & FP&A) | 4 |
 | S06 | **Unit economics & break-even ROAS** | [`unit-economics`](../.claude/skills/unit-economics/SKILL.md) | Compute contribution margin, break-even ROAS, target CPA and profit per order. | A01 Engagement Lead (Chief Strategist), A08 CRO & UX Specialist, A16 Financial Analyst (Unit Economics & FP&A), A21 Paid Social Media Buyer, A24 Email & SMS Retention Marketer, A25 Search & Shopping Marketer | 6 |
 | S07 | **Financial forecasting & cash-flow planning** | [`financial-forecasting`](../.claude/skills/financial-forecasting/SKILL.md) | Build budgets, runway and scenario models, including payout-reserve and ad-testing buffers. | A01 Engagement Lead (Chief Strategist), A14 Payments & Fraud Risk Specialist, A16 Financial Analyst (Unit Economics & FP&A), A17 Bookkeeping & Tax Specialist | 4 |
-| S08 | **Persona & customer journey mapping** | [`customer-personas`](../.claude/skills/customer-personas/SKILL.md) | Define personas, motivations, objections and the touchpoints from ad to repeat purchase. | A05 Customer Insights Researcher, A06 Brand Strategist, A08 CRO & UX Specialist, A13 Customer Experience Lead, A23 Conversion Copywriter, A24 Email & SMS Retention Marketer | 6 |
+| S08 | **Persona & customer journey mapping** | [`customer-personas`](../.claude/skills/customer-personas/SKILL.md) | Define personas, motivations, objections and the touchpoints from ad to repeat purchase. | A05 Customer Insights Researcher, A06 Brand Strategist, A08 CRO & UX Specialist, A13 Customer Experience Lead, A23 Conversion Copywriter, A24 Email & SMS Retention Marketer, A29 NLTK Text Analytics Expert | 7 |
 | S09 | **Brand positioning & identity** | [`brand-positioning`](../.claude/skills/brand-positioning/SKILL.md) | Choose a niche position, name, voice and visual system that set the store apart from marketplaces. | A06 Brand Strategist, A19 Corporate & IP Counsel, A22 Creative Director & UGC Producer, A23 Conversion Copywriter | 4 |
 | S10 | **Persuasive & compliant copywriting** | [`compliant-copywriting`](../.claude/skills/compliant-copywriting/SKILL.md) | Write product pages, ads, emails and support replies that convert without making unsubstantiated claims. | A06 Brand Strategist, A13 Customer Experience Lead, A22 Creative Director & UGC Producer, A23 Conversion Copywriter, A24 Email & SMS Retention Marketer, A25 Search & Shopping Marketer | 6 |
 | S11 | **Creative briefing & UGC production** | [`ugc-creative-production`](../.claude/skills/ugc-creative-production/SKILL.md) | Turn angles into creator briefs, shot lists and edits, and manage a creative testing pipeline. | A21 Paid Social Media Buyer, A22 Creative Director & UGC Producer, A26 Social Commerce & Influencer Manager | 3 |
@@ -126,65 +128,69 @@ Skills ordered by ID. **Shared by** counts how many agents use each skill, which
 | S37 | **Orchestration & decision synthesis** | [`decision-synthesis`](../.claude/skills/decision-synthesis/SKILL.md) | Break problems into tasks, route them to experts, reconcile conflicting advice, and write decision memos. | A01 Engagement Lead (Chief Strategist), A20 Risk Manager, A27 Orchestrator | 3 |
 | S38 | **Expert routing** | [`expert-routing`](../.claude/skills/expert-routing/SKILL.md) | Routing table and standard expert panels: which agent to bring in for which question, and in what order. | A01 Engagement Lead (Chief Strategist), A27 Orchestrator, A28 Team Architect (meta agent) | 3 |
 | S39 | **Subagent authoring** | [`subagent-authoring`](../.claude/skills/subagent-authoring/SKILL.md) | Create, improve or retire agents in .claude/agents/: frontmatter, tools, skill wiring, prompt structure, validation. | A28 Team Architect (meta agent) | 1 |
+| S41 | **NLTK text analysis** | [`nltk-text-analysis`](../.claude/skills/nltk-text-analysis/SKILL.md) | Tokenizing, stopwords, FreqDist word frequency, VADER sentiment and collocations on store text. | A05 Customer Insights Researcher, A29 NLTK Text Analytics Expert | 2 |
+| S42 | **spaCy NLP pipeline** | [`spacy-nlp-pipeline`](../.claude/skills/spacy-nlp-pipeline/SKILL.md) | Named entities, custom EntityRuler, noun chunks, lemmas, dependency parsing and displaCy on store text. | A04 Competitive Intelligence Analyst, A05 Customer Insights Researcher, A30 spaCy NLP Engineer | 3 |
 | S40 | **Skill authoring** | [`skill-authoring`](../.claude/skills/skill-authoring/SKILL.md) | Create, improve or retire skills in .claude/skills/: frontmatter, concise instructions, sharing across agents, validation. | A28 Team Architect (meta agent) | 1 |
 
 ### Most-shared skills (build these first)
 
-- **S01 Web research & source evaluation**: 11 agents
+- **S01 Web research & source evaluation**: 13 agents
 - **S27 FTC advertising & consumer-protection rules**: 8 agents
+- **S08 Persona & customer journey mapping**: 7 agents
+- **S03 Ad library & competitor teardown**: 6 agents
 - **S06 Unit economics & break-even ROAS**: 6 agents
-- **S08 Persona & customer journey mapping**: 6 agents
 - **S10 Persuasive & compliant copywriting**: 6 agents
 - **S02 Trend & demand validation**: 5 agents
-- **S03 Ad library & competitor teardown**: 5 agents
 - **S14 App stack evaluation**: 5 agents
 
 ## Part 3 — Agent × skill matrix
 
 Agents across the top (by ID), skills down the side. ● = the agent uses the skill.
 
-| Skill | A01 | A02 | A03 | A04 | A05 | A06 | A07 | A08 | A09 | A10 | A11 | A12 | A13 | A14 | A15 | A16 | A17 | A18 | A19 | A20 | A21 | A22 | A23 | A24 | A25 | A26 | A27 | A28 |
-|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| S01 Web research & source evaluation | ● | ● | ● | ● | ● |  |  |  |  |  | ● | ● |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  | ● | ● |
-| S02 Trend & demand validation |  | ● | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  | ● |  |  |
-| S03 Ad library & competitor teardown |  |  | ● | ● |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |
-| S04 Product scoring | ● |  | ● |  |  |  |  |  |  |  | ● |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |
-| S05 Pricing & margin modeling |  |  | ● | ● |  |  |  | ● |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |
-| S06 Unit economics & break-even ROAS | ● |  |  |  |  |  |  | ● |  |  |  |  |  |  |  | ● |  |  |  |  | ● |  |  | ● | ● |  |  |  |
-| S07 Financial forecasting & cash-flow planning | ● |  |  |  |  |  |  |  |  |  |  |  |  | ● |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |
-| S08 Persona & customer journey mapping |  |  |  |  | ● | ● |  | ● |  |  |  |  | ● |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  |  |
-| S09 Brand positioning & identity |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  | ● | ● |  |  |  |  |  |
-| S10 Persuasive & compliant copywriting |  |  |  |  |  | ● |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  | ● | ● | ● | ● |  |  |  |
-| S11 Creative briefing & UGC production |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  | ● |  |  |
-| S12 Shopify admin & configuration |  |  |  |  |  |  | ● |  |  | ● |  |  |  | ● |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |
-| S13 Shopify theme development (Liquid / OS 2.0) |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| S14 App stack evaluation |  |  |  |  |  |  | ● |  | ● | ● |  |  | ● |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |
-| S15 CRO & A/B testing |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  | ● |  | ● | ● |  |  |  |  |
-| S16 Web accessibility & performance |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |
-| S17 Tracking & attribution |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  | ● |  |  | ● | ● |  |  |  |
-| S18 KPI dashboards & reporting | ● |  |  |  |  |  |  |  | ● |  |  |  |  |  |  | ● |  |  |  | ● | ● |  |  |  |  |  |  |  |
-| S19 Workflow automation & integrations |  |  |  |  |  |  |  |  |  | ● | ● | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| S20 Supplier vetting & negotiation |  |  | ● |  |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| S21 Order & inventory operations |  |  |  |  |  |  |  |  |  | ● | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| S22 Shipping, customs & tariff management |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  | ● |  | ● |  |  |  |  |  |  |  |  |  |  |
-| S23 Returns, refunds & dispute handling |  |  |  |  |  |  |  |  |  |  |  | ● | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| S24 Customer support operations |  |  |  |  | ● |  |  |  |  | ● |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| S25 Payment risk & chargeback management |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  | ● |  |  |  | ● |  |  |  |  |  |  |  |  |
-| S26 Bookkeeping & sales-tax compliance |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |
-| S27 FTC advertising & consumer-protection rules |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  | ● |  | ● | ● | ● | ● | ● |  | ● |  |  |
-| S28 Privacy & marketing consent |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  | ● |  |  |  |  |  | ● |  |  |  |  |
-| S29 Product safety & regulatory screening |  |  | ● |  |  |  |  |  |  |  | ● |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |
-| S30 Contracts, entity & IP |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  | ● |  |  |  |  |  |  | ● |  |  |
-| S31 Paid social campaign management |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  | ● |  |  |
-| S32 Google Shopping, feeds & SEO |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |
-| S33 Email & SMS lifecycle marketing |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |
-| S34 Influencer & affiliate management |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  | ● |  |  |
-| S35 Hiring & SOP documentation | ● |  |  |  |  |  |  |  |  |  |  | ● | ● |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| S36 Risk assessment & monitoring | ● |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  | ● |  | ● |  |  |  |  |  |  |  |  |
-| S37 Orchestration & decision synthesis | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  | ● |  |
-| S38 Expert routing | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |
-| S39 Subagent authoring |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |
-| S40 Skill authoring |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |
+| Skill | A01 | A02 | A03 | A04 | A05 | A06 | A07 | A08 | A09 | A10 | A11 | A12 | A13 | A14 | A15 | A16 | A17 | A18 | A19 | A20 | A21 | A22 | A23 | A24 | A25 | A26 | A29 | A30 | A27 | A28 |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| S01 Web research & source evaluation | ● | ● | ● | ● | ● |  |  |  |  |  | ● | ● |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  | ● | ● | ● | ● |
+| S02 Trend & demand validation |  | ● | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  | ● |  |  |  |  |
+| S03 Ad library & competitor teardown |  |  | ● | ● |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  |  |  | ● |  |  |
+| S04 Product scoring | ● |  | ● |  |  |  |  |  |  |  | ● |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S05 Pricing & margin modeling |  |  | ● | ● |  |  |  | ● |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S06 Unit economics & break-even ROAS | ● |  |  |  |  |  |  | ● |  |  |  |  |  |  |  | ● |  |  |  |  | ● |  |  | ● | ● |  |  |  |  |  |
+| S07 Financial forecasting & cash-flow planning | ● |  |  |  |  |  |  |  |  |  |  |  |  | ● |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S08 Persona & customer journey mapping |  |  |  |  | ● | ● |  | ● |  |  |  |  | ● |  |  |  |  |  |  |  |  |  | ● | ● |  |  | ● |  |  |  |
+| S09 Brand positioning & identity |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  | ● | ● |  |  |  |  |  |  |  |
+| S10 Persuasive & compliant copywriting |  |  |  |  |  | ● |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  | ● | ● | ● | ● |  |  |  |  |  |
+| S11 Creative briefing & UGC production |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  | ● |  |  |  |  |
+| S12 Shopify admin & configuration |  |  |  |  |  |  | ● |  |  | ● |  |  |  | ● |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S13 Shopify theme development (Liquid / OS 2.0) |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S14 App stack evaluation |  |  |  |  |  |  | ● |  | ● | ● |  |  | ● |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |
+| S15 CRO & A/B testing |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  | ● |  | ● | ● |  |  |  |  |  |  |
+| S16 Web accessibility & performance |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |
+| S17 Tracking & attribution |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  | ● |  |  | ● | ● |  |  |  |  |  |
+| S18 KPI dashboards & reporting | ● |  |  |  |  |  |  |  | ● |  |  |  |  |  |  | ● |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  |
+| S19 Workflow automation & integrations |  |  |  |  |  |  |  |  |  | ● | ● | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S20 Supplier vetting & negotiation |  |  | ● |  |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S21 Order & inventory operations |  |  |  |  |  |  |  |  |  | ● | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S22 Shipping, customs & tariff management |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  | ● |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |
+| S23 Returns, refunds & dispute handling |  |  |  |  |  |  |  |  |  |  |  | ● | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S24 Customer support operations |  |  |  |  | ● |  |  |  |  | ● |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S25 Payment risk & chargeback management |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  | ● |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |
+| S26 Bookkeeping & sales-tax compliance |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S27 FTC advertising & consumer-protection rules |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  | ● |  | ● | ● | ● | ● | ● |  | ● |  |  |  |  |
+| S28 Privacy & marketing consent |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  | ● |  |  |  |  |  | ● |  |  |  |  |  |  |
+| S29 Product safety & regulatory screening |  |  | ● |  |  |  |  |  |  |  | ● |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |
+| S30 Contracts, entity & IP |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  | ● |  |  |  |  |  |  | ● |  |  |  |  |
+| S31 Paid social campaign management |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |  |  |  | ● |  |  |  |  |
+| S32 Google Shopping, feeds & SEO |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |
+| S33 Email & SMS lifecycle marketing |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |
+| S34 Influencer & affiliate management |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  | ● |  |  |  |  |
+| S35 Hiring & SOP documentation | ● |  |  |  |  |  |  |  |  |  |  | ● | ● |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| S36 Risk assessment & monitoring | ● |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  | ● |  | ● |  |  |  |  |  |  |  |  |  |  |
+| S37 Orchestration & decision synthesis | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |  |  |  |  |  | ● |  |
+| S38 Expert routing | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● | ● |
+| S39 Subagent authoring |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |
+| S41 NLTK text analysis |  |  |  |  | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |  |
+| S42 spaCy NLP pipeline |  |  |  | ● | ● |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |  |  |
+| S40 Skill authoring |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ● |
 
 ## Guardrails for every agent
 

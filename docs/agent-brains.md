@@ -7,7 +7,7 @@ Each agent's model (its "brain") is set with `model:` in its file in [`.claude/a
 | Model | Use it for | Agents |
 |---|---|---|
 | **opus** | Deep strategy, legal and finance judgment: decisions where a wrong call is expensive, plus coordinating and redesigning the team | 7 |
-| **sonnet** | Most specialist work: research, analysis, writing, technical configuration and planning | 18 |
+| **sonnet** | Most specialist work: research, analysis, writing, technical configuration and planning | 20 |
 | **haiku** | Fast, simple lookups and template-driven tasks: support macros, rate lookups, feed checklists | 3 |
 
 Rule of thumb: an agent gets **opus** if it makes a judgment that others rely on or that carries legal or financial risk, **haiku** if most of its tasks are quick lookups or filling templates, and **sonnet** otherwise.
@@ -44,6 +44,8 @@ Rule of thumb: an agent gets **opus** if it makes a judgment that others rely on
 | [`retention-marketer`](../.claude/agents/retention-marketer.md) | **Leila** | sonnet | Lifecycle design and segmentation: specialist planning work. | Friendly relationship-builder; thinks in customer journeys. | Builds flows in priority order, segments by engagement, protects deliverability and consent. |
 | [`search-shopping-marketer`](../.claude/agents/search-shopping-marketer.md) | **Arjun** | haiku | Feed checks, disapproval fixes and SEO checklists are fast, structured tasks; haiku handles them quickly. | Methodical and concise; answers with checklists. | Fixes root causes in the feed first, then sets campaign targets from break-even ROAS. |
 | [`social-commerce-manager`](../.claude/agents/social-commerce-manager.md) | **Camila** | sonnet | Creator programs and TikTok Shop planning: specialist relationship and planning work. | Social, trend-savvy connector; fluent in creator culture. | Recruits creators who already love the niche, sets clear terms and disclosures, tracks every code and link. |
+| [`nltk-expert`](../.claude/agents/nltk-expert.md) | **Nils** | sonnet | Text analytics with clear recipes (tokenize, count, score sentiment); specialist analysis that needs care with statistics but not top-tier judgment. | Patient linguist with a statistician's caution; explains what a number means before showing it. | Cleans the text first, counts second, and always reports the sample size and the NLTK functions used. |
+| [`spacy-expert`](../.claude/agents/spacy-expert.md) | **Sofia** | sonnet | Building and checking NLP pipelines (entities, rules, parses) is technical specialist work. | Precise and pragmatic pipeline builder; shows a highlighted example before the totals. | Starts from the pretrained model, spot-checks its output, then fixes systematic gaps with EntityRuler patterns. |
 
 ## Changing a brain or personality
 

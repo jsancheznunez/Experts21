@@ -1,6 +1,6 @@
 # How to Talk to Your Experts
 
-Ways to put questions to the 28-agent advisory team. For who's on the team, see [`CLAUDE.md`](../CLAUDE.md) and [expert-roster.md](expert-roster.md).
+Ways to put questions to the 30-agent advisory team. For who's on the team, see [`CLAUDE.md`](../CLAUDE.md) and [expert-roster.md](expert-roster.md).
 
 There are three ways in:
 
@@ -29,6 +29,14 @@ Use the ecommerce-compliance-counsel agent to review this product page copy for 
 
 ```
 Ask the sourcing-supplier-manager: how do I check whether a CJdropshipping listing really ships from a US warehouse?
+```
+
+```
+@agent-nltk-expert here are 40 anonymized reviews (pasted below). What do 1–2★ reviewers complain about most, and what is the VADER sentiment trend?
+```
+
+```
+Use the spacy-expert agent to extract prices, discounts and platforms from this competitor product page: ...
 ```
 
 **Tips**
@@ -102,7 +110,7 @@ a ranked risk register with early-warning metrics and the prevention step for ea
 
 **Notes**
 - A whole-team run covers about 6–8 experts (one or more per domain) plus reviewers. It's the most thorough option and also the slowest and most expensive. Save it for major decisions.
-- To have **all 26 experts** answer at once, ask `team-architect` to raise the orchestrator's 8-expert cap. Above that size, the answers tend to get repetitive rather than better.
+- To have **all 28 experts** answer at once, ask `team-architect` to raise the orchestrator's 8-expert cap. Above that size, the answers tend to get repetitive rather than better.
 
 ---
 
